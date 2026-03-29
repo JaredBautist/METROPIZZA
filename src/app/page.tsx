@@ -250,7 +250,7 @@ export default function Home() {
 
                   <p className="text-text-muted text-lg leading-relaxed">
                     En MetroPizza te traemos las recetas autenticas de la Nonna italiana
-                    preparadas con los mejores ingredientes y la pasion de siempre. 
+                    preparadas con los mejores ingredientes y la pasion de siempre.
                     Cada plato es una obra de arte que honra la tradicion.
                   </p>
 
@@ -419,7 +419,7 @@ export default function Home() {
           <div className="section-container relative z-10">
             <SectionReveal>
               <div className="text-center max-w-3xl mx-auto mb-16 pt-10">
-                <Badge variant="accent" icon={<UtensilsCrossed className="w-4 h-4" />}>
+                <Badge variant="default" icon={<UtensilsCrossed className="w-4 h-4" />}>
                   Carta Italiana
                 </Badge>
 
@@ -547,7 +547,7 @@ export default function Home() {
           <div className="section-container relative z-10">
             <SectionReveal>
               <div className="text-center max-w-3xl mx-auto mb-16">
-                <Badge variant="accent">Testimonios</Badge>
+                <Badge variant="default">Testimonios</Badge>
                 <h2 className="font-heading text-4xl md:text-5xl mt-4 mb-4">
                   Lo Que Dicen Nuestros <span className="text-primary">Clientes</span>
                 </h2>
@@ -593,11 +593,11 @@ export default function Home() {
         </section>
 
         {/* Sucursales Section */}
-        <section id="sucursales" className="section-padding bg-white/5 backdrop-blur-[2px] relative overflow-hidden border-t border-white/20">
+        <section id="sucursales" className="py-20 pb-20 md:py-28 bg-white/5 backdrop-blur-[2px] relative overflow-hidden border-t border-white/20">
           <div className="section-container relative z-10">
             <SectionReveal>
               <div className="text-center max-w-3xl mx-auto mb-16">
-                <Badge variant="accent" icon={<MapPin className="w-4 h-4" />}>
+                <Badge variant="default" icon={<MapPin className="w-4 h-4" />}>
                   Nuestras Sucursales
                 </Badge>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-text-main mt-6 mb-6">
@@ -640,8 +640,8 @@ export default function Home() {
             <div className="flex-1 bg-primary" />
           </div>
 
-          {/* CTA Banner */}
-          <div className="relative -translate-y-1/2">
+          {/* CTA Banner - Subido más por petición del usuario */}
+          <div className="relative z-10 -mt-12 md:mt-0 md:-translate-y-1/2">
             <div className="section-container">
               <div className="bg-gradient-to-r from-primary via-primary/90 to-orange-600 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
                 {/* Subtle diagonal lines */}
@@ -674,9 +674,9 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-12 border-b border-white/10 pb-12">
               <div>
                 <Link href="#inicio" className="flex items-center gap-3 font-heading font-black text-3xl tracking-tight mb-6">
-                  <Image 
-                    src={logoImg} 
-                    alt="Metro Pizza Logo" 
+                  <Image
+                    src={logoImg}
+                    alt="Metro Pizza Logo"
                     className="w-12 h-12 object-cover rounded-full shadow-lg border-2 border-white/10"
                     unoptimized
                   />
@@ -733,19 +733,19 @@ export default function Home() {
                     <div className="text-gray-400 text-sm flex flex-col gap-1 w-full mt-1">
                       <p className="font-bold text-white mb-1">Pide ahora en:</p>
                       <Link href="tel:+573108884489" className="hover:text-white transition-colors flex items-center justify-between">
-                        <span className="text-orange-500 font-semibold">Los Patios:</span> 
+                        <span className="text-orange-500 font-semibold">Los Patios:</span>
                         <span>+57 310 888 4489</span>
                       </Link>
                       <Link href="tel:+573135501695" className="hover:text-white transition-colors flex items-center justify-between">
-                        <span className="text-accent font-semibold">Bellavista:</span> 
+                        <span className="text-accent font-semibold">Bellavista:</span>
                         <span>313 550 1695</span>
                       </Link>
                       <Link href="tel:+573134605816" className="hover:text-white transition-colors flex items-center justify-between">
-                        <span className="text-white font-semibold">Ceiba:</span> 
+                        <span className="text-white font-semibold">Ceiba:</span>
                         <span>313 460 5816</span>
                       </Link>
                       <Link href="tel:+573225793400" className="hover:text-white transition-colors flex items-center justify-between">
-                        <span className="text-primary font-semibold">Malecón:</span> 
+                        <span className="text-primary font-semibold">Malecón:</span>
                         <span>322 579 3400</span>
                       </Link>
                     </div>
