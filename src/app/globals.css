@@ -1,26 +1,223 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ==============================================
+   PALETA METROPIZZA
+   Rojo     #E31B22  |  Naranja  #F97316
+   Amarillo #FED401  |  Blanco   #FFFFFF
+   ============================================== */
+
+@theme {
+  /* ---- Colores de Marca ---- */
+  --color-primary:         #E31B22;
+  --color-primary-dark:    #B31218;
+  --color-primary-light:   #FF3B42;
+
+  --color-secondary:       #F97316;
+  --color-secondary-light: #FB923C;
+
+  --color-accent:          #FED401;
+  --color-accent-dark:     #E5BE00;
+
+  /* ---- Fondos ---- */
+  --color-bg-light:  #FFFBF0;   /* crema cálido, no blanco frío */
+  --color-bg-cream:  #FFF8E7;
+  --color-bg-dark:   #1A0A0A;   /* casi negro con tono cálido */
+  --color-bg-card:   #ffffff;
+
+  /* ---- Textos ---- */
+  --color-text-main:  #1C1917;
+  --color-text-muted: #57534E;
+  --color-text-light: #FFFBF0;
+
+  /* Alias Italy (compatibilidad con clases ya en uso en page.tsx) */
+  --color-italy-red:   #E31B22;
+  --color-italy-green: #F97316;   /* naranja de marca reemplaza verde */
+  --color-italy-white: #FFFFFF;
+  --color-italy-blue:  #1A0A0A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-bg-light text-text-main antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    @apply font-serif;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: #E31B22;
+    color: white;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-center transition-all duration-300 relative overflow-hidden;
+  }
+
+  .btn::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full transition-transform duration-700;
+  }
+
+  .btn:hover::before {
+    @apply translate-x-full;
+  }
+
+  /* Rojo */
+  .btn-primary {
+    @apply bg-primary text-white shadow-[0_4px_20px_rgba(227,27,34,0.4)] hover:bg-primary-dark hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(227,27,34,0.55)];
+  }
+
+  /* Naranja */
+  .btn-secondary {
+    @apply bg-secondary text-white shadow-[0_4px_20px_rgba(249,115,22,0.3)] hover:bg-secondary-light hover:-translate-y-1;
+  }
+
+  /* Amarillo */
+  .btn-accent {
+    @apply bg-accent text-text-main font-bold shadow-[0_4px_20px_rgba(254,212,1,0.5)] hover:bg-accent-dark hover:-translate-y-1;
+  }
+
+  /* WhatsApp */
+  .btn-whatsapp {
+    @apply bg-[#25D366] text-white text-lg px-10 py-4 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.3)] hover:bg-[#1EBE55] hover:-translate-y-1 flex items-center justify-center gap-2;
+  }
+
+  /* Ghost - sobre fondos oscuros */
+  .btn-ghost {
+    @apply bg-white/10 text-white border border-white/30 backdrop-blur-sm hover:bg-white/20 hover:-translate-y-0.5;
+  }
+
+  /* ---- Layout ---- */
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ---- Cards ---- */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .premium-card {
+    @apply bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-orange-100 overflow-hidden;
+  }
+
+  /* ---- Gradientes de marca ---- */
+  .gradient-brand {
+    background: linear-gradient(135deg, #E31B22 0%, #F97316 55%, #FED401 100%);
+  }
+
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    animation: gradient-shift 8s ease infinite;
+    background-size: 200% 200%;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-2;
+  }
+
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(circle, rgba(249,115,22,0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .icon-spin:hover   { animation: spin   0.5s ease-in-out; }
+  .icon-bounce:hover { animation: bounce 0.5s ease-in-out; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0)     rotate(0deg); }
+  50%       { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1;   transform: scale(1);    }
+  50%       { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);    }
+  50%       { transform: translateY(-5px); }
+}
+
+/* Scrollbar Rojo → Naranja */
+::-webkit-scrollbar       { width: 8px; }
+::-webkit-scrollbar-track { background: #FFF8E7; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #E31B22, #F97316);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #B31218, #EA6A0A);
+}
+
+*:focus-visible {
+  outline: 2px solid #E31B22;
+  outline-offset: 2px;
+}
+
+@media print {
+  .no-print { display: none !important; }
 }

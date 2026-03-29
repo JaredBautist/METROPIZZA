@@ -1,0 +1,65 @@
+'use client';
+
+import { useEffect, useRef, useState, ReactNode } from 'react';
+
+interface SectionRevealProps {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+  direction?: 'up' | 'down' | 'left' | 'right' | 'fade';
+  duration?: number;
+}
+
+export default function SectionReveal({
+  children,
+  className = '',
+  delay = 0,
+  direction = 'up',
+  duration = 800,
+}: SectionRevealProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1, rootMargin: '-50px' }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const getTransform = () => {
+    switch (direction) {
+      case 'up': return 'translateY(40px)';
+      case 'down': return 'translateY(-40px)';
+      case 'left': return 'translateX(40px)';
+      case 'right': return 'translateX(-40px)';
+      case 'fade': return 'translateY(0)';
+      default: return 'translateY(40px)';
+    }
+  };
+
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translate(0)' : getTransform(),
+        transition: `all ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
