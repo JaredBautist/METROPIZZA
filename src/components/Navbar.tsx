@@ -66,6 +66,12 @@ export default function Navbar() {
               )}
               unoptimized
             />
+            <span className={cn(
+              "font-heading font-black tracking-tight transition-all duration-300",
+              isScrolled ? "text-xl" : "text-2xl"
+            )}>
+              Metro<span className="text-primary">Pizza</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

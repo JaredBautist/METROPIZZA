@@ -116,10 +116,12 @@ export default function Home() {
             </SectionReveal>
 
             <SectionReveal delay={100}>
-              <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl">
-                ¡El sabor a<br />
-                <span className="text-accent italic">tu medida!</span>
+              <h1 className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-4 leading-tight drop-shadow-2xl tracking-tight">
+                Metro <span className="text-accent">Pizza</span>
               </h1>
+              <h2 className="font-heading text-2xl md:text-4xl text-accent italic mb-8 drop-shadow-lg">
+                ¡El sabor a tu medida!
+              </h2>
             </SectionReveal>
 
             <SectionReveal delay={150}>
