@@ -740,15 +740,15 @@ export default function Home() {
                       </Link>
                       <Link href="tel:+573135501695" className="hover:text-white transition-colors flex items-center justify-between">
                         <span className="text-accent font-semibold">Bellavista:</span>
-                        <span>313 550 1695</span>
+                        <span>+57 313 550 1695</span>
                       </Link>
                       <Link href="tel:+573134605816" className="hover:text-white transition-colors flex items-center justify-between">
                         <span className="text-white font-semibold">Ceiba:</span>
-                        <span>313 460 5816</span>
+                        <span>+57 313 460 5816</span>
                       </Link>
                       <Link href="tel:+573225793400" className="hover:text-white transition-colors flex items-center justify-between">
                         <span className="text-primary font-semibold">Malecón:</span>
-                        <span>322 579 3400</span>
+                        <span>+57 322 579 3400</span>
                       </Link>
                     </div>
                   </li>
