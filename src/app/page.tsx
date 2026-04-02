@@ -1012,7 +1012,16 @@ const galleryImages = [
   { src: "https://instagram.fbga2-1.fna.fbcdn.net/v/t51.82787-15/582002465_18096940039794197_2239727367230332515_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzc2NjUyNDA0NDg4MDQ2NTg0Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTkyMC5zZHIuQzMifQ%3D%3D&_nc_ohc=1R7JquCAijkQ7kNvwHq9hH1&_nc_oc=AdqLRLehQi-GJB6_Zj1koOp0gD2bakWD9AwxqhsFsUkQOiiQWO727Uup_8q5ljveEi96g0lrUpEd0cV4fmhVNj8e&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbga2-1.fna&_nc_gid=-pyyHtQqDmNpqJ9oFklMTQ&_nc_ss=7a32e&oh=00_AfxAnmZHxf6zEqR81zVWCjw1zyg_wp7Npyv59WYnssGNEQ&oe=69CE7CF0", alt: "MetroPizza 4" },
   { src: "https://instagram.fbga2-1.fna.fbcdn.net/v/t39.30808-6/468055315_18061953916794197_7476465813196411478_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzI0OTIxOTgwMTQyNjM2NDg1Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=nBNdtpqwehAQ7kNvwFcoOQ5&_nc_oc=Adr4enLt8-bZiIOmI3LGqFaSrP3QGWiWYV6FhJ9qbA5C59M1jXAoQSWjjLDXoOml8S8YwQxXt_XJlSjDZzpr_17N&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbga2-1.fna&_nc_gid=xzwvEocwcfsMQCouX0t78A&_nc_ss=7a32e&oh=00_AfwxYU9hdOmLHM1AytDBLkDCUTnQQyDSyjJSSdE0FlV5ow&oe=69CE5D02", alt: "MetroPizza 5" },
   { src: "https://instagram.fbga2-1.fna.fbcdn.net/v/t39.30808-6/402134750_18024779164794197_124564517541382461_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ig_cache_key=MzI0MDQ3NDI4MTQ2ODYxMzI2NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=QiBwuRueSvoQ7kNvwH4ip3w&_nc_oc=AdoDJcaQOOjv2Hq_gAtARbcT4bWQ3O1NhascKvqUtHRK22Ofy4EaZ2lVJZ014lKa-myuUQdbzUaPdRUyPnzmxtut&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbga2-1.fna&_nc_gid=LSWhlPsMfHtrqd0dKtn90g&_nc_ss=7a32e&oh=00_AfzL8hm--HbqELLAqRXqyt4DUflWYY4Pk8GNv5D8GQyURA&oe=69CE64E6", alt: "MetroPizza 6" },
+  { 
+    src: "https://instagram.fbog20-1.fna.fbcdn.net/v/t39.30808-6/396292797_18022298770794197_6781914378553959374_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzIyNjcxNzc1MDQwMzA2ODc1Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNDl4MTY4Ny5zZHIuQzMifQ%3D%3D&_nc_ohc=t_76cbSPIVMQ7kNvwE4pZrU&_nc_oc=AdpEy0vNv64MAuoMiQr2jcfA3IRvNStx0IwBxjZAnm-v0ypfeICQvkF1OcAgs9dXJog&_nc_ad=z-m&_nc_cid=1462&_nc_zt=23&_nc_ht=instagram.fbog20-1.fna&_nc_gid=rZNUXKF3aqAD5u6qtrz-ww&_nc_ss=7a32e&oh=00_Af0_KALA8ag3D93zexNR7X--VroU2M_5G6LtxRoyfL8Dxg&oe=69D381B3", 
+    alt: "Momento MetroPizza - Slice de Verdad" 
+  },
+  { 
+    src: "https://instagram.fbog20-1.fna.fbcdn.net/v/t39.30808-6/392938801_18020404813794197_6164225698629784100_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=MzIxNTA5ODkzNjkwMTIzMDQ0OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNDl4MTY4Ny5zZHIuQzMifQ%3D%3D&_nc_ohc=qMZ6j1TSc60Q7kNvwHm8Tax&_nc_oc=Ado5i0062rfZmibw4ttQEsT7HevPl0xH0p-MdSfA3SzYYxL7SjUik5h-qn00ZI2xqRk&_nc_ad=z-m&_nc_cid=1462&_nc_zt=23&_nc_ht=instagram.fbog20-1.fna&_nc_gid=3EDGtbiJ264q8_30nbvdiQ&_nc_ss=7a32e&oh=00_Af1looksQIzmJ3T8mEKTfcRurFS8djFtDzKpqCjcEP6-Xg&oe=69D37DE9", 
+    alt: "Especialidad de la Casa - Mucho Queso" 
+  },
 ];
+
 
 const testimonials = [
   {
