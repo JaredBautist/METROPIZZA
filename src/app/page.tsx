@@ -92,25 +92,13 @@ export default function Home() {
                   variant="white"
                   icon={<MapPin className="w-4 h-4" />}
                 >
-                  Los Patios
+                  Patios (Gourmet)
                 </Badge>
                 <Badge
                   variant="white"
                   icon={<MapPin className="w-4 h-4" />}
                 >
-                  Premium
-                </Badge>
-                <Badge
-                  variant="white"
-                  icon={<MapPin className="w-4 h-4" />}
-                >
-                  Ceiba
-                </Badge>
-                <Badge
-                  variant="white"
-                  icon={<MapPin className="w-4 h-4" />}
-                >
-                  Malecón
+                  Pinar del Río (Premium)
                 </Badge>
               </div>
             </SectionReveal>
@@ -137,7 +125,7 @@ export default function Home() {
                   Ver la Carta
                 </Link>
                 <Link
-                  href="https://wa.me/573108884489?text=Hola%20MetroPizza"
+                  href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
                   target="_blank"
                   className="btn btn-ghost text-lg"
                 >
@@ -606,17 +594,15 @@ export default function Home() {
                   Visítanos en tu <span className="text-primary">sede favorita</span>
                 </h2>
                 <p className="text-text-muted text-lg">
-                  El verdadero sabor de Italia en 4 ubicaciones pensadas para ti.
+                  El verdadero sabor de Italia en 2 ubicaciones pensadas para ti.
                 </p>
               </div>
             </SectionReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto gap-8">
               {[
-                { name: "Sede Los Patios", address: "Cl. 16 #9-45", city: "Los Patios, Norte de Santander" },
-                { name: "Premium", address: "Barrio Bellavista", city: "Cúcuta, Norte de Santander" },
-                { name: "Sede La Ceiba", address: "Quinta Bosch, Av. 3 Este #0-62", city: "Cúcuta, Norte de Santander" },
-                { name: "Sede Malecón", address: "Av. Libertadores #7a-20", city: "Cúcuta, Norte de Santander" },
+                { name: "Patios (Gourmet)", address: "Cl. 16 #9-45", city: "Los Patios, Norte de Santander" },
+                { name: "Pinar del Río (Premium)", address: "Barrio Bellavista", city: "Cúcuta, Norte de Santander" },
               ].map((branch, i) => (
                 <SectionReveal key={i} delay={i * 100}>
                   <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:border-primary transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
@@ -661,11 +647,11 @@ export default function Home() {
                     </p>
                   </div>
                   <Link
-                    href="https://wa.me/573108884489?text=Hola%20MetroPizza,%20quiero%20hacer%20un%20pedido"
+                    href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
                     target="_blank"
                     className="btn bg-white text-text-main hover:bg-gray-100 whitespace-nowrap px-10 py-4 shadow-xl flex gap-2 items-center"
                   >
-                    <Phone className="w-5 h-5" /> Pedir por WhatsApp
+                    <Phone className="w-5 h-5" /> Pedir Ahora
                   </Link>
                 </div>
               </div>
@@ -724,10 +710,8 @@ export default function Home() {
                     <MapPin className="w-6 h-6 text-orange-500 shrink-0 mt-1" />
                     <div className="text-gray-400 text-sm">
                       <p className="font-bold text-white mb-2">Visítanos en:</p>
-                      <p className="mb-1"><span className="text-orange-500 font-semibold">Los Patios:</span> Cl. 16 #9-45, Los Patios</p>
-                      <p className="mb-1"><span className="text-accent font-semibold">Premium:</span> Barrio Bellavista, Cúcuta</p>
-                      <p className="mb-1"><span className="text-white font-semibold">Ceiba:</span> Quinta Bosch, Av. 3 Este #0-62</p>
-                      <p><span className="text-primary font-semibold">Malecón:</span> Av. Libertadores # 7a-20</p>
+                      <p className="mb-1"><span className="text-orange-500 font-semibold">Patios (Gourmet):</span> Cl. 16 #9-45, Los Patios</p>
+                      <p className="mb-1"><span className="text-accent font-semibold">Pinar del Río (Premium):</span> Barrio Bellavista, Cúcuta</p>
                     </div>
                   </li>
                   <li className="flex items-center gap-4">
@@ -735,20 +719,12 @@ export default function Home() {
                     <div className="text-gray-400 text-sm flex flex-col gap-1 w-full mt-1">
                       <p className="font-bold text-white mb-1">Pide ahora en:</p>
                       <Link href="tel:+573108884489" className="hover:text-white transition-colors flex items-center justify-between">
-                        <span className="text-orange-500 font-semibold">Los Patios:</span>
+                        <span className="text-orange-500 font-semibold">Patios (Gourmet):</span>
                         <span>+57 310 888 4489</span>
                       </Link>
                       <Link href="tel:+573135501695" className="hover:text-white transition-colors flex items-center justify-between">
-                        <span className="text-accent font-semibold">Bellavista:</span>
+                        <span className="text-accent font-semibold">Pinar del Río (Premium):</span>
                         <span>+57 313 550 1695</span>
-                      </Link>
-                      <Link href="tel:+573134605816" className="hover:text-white transition-colors flex items-center justify-between">
-                        <span className="text-white font-semibold">Ceiba:</span>
-                        <span>+57 313 460 5816</span>
-                      </Link>
-                      <Link href="tel:+573225793400" className="hover:text-white transition-colors flex items-center justify-between">
-                        <span className="text-primary font-semibold">Malecón:</span>
-                        <span>+57 322 579 3400</span>
                       </Link>
                     </div>
                   </li>
@@ -857,7 +833,7 @@ export default function Home() {
                     name: "¿Donde esta ubicado MetroPizza?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "MetroPizza esta ubicado en la Calle 16 #9-45, Los Patios, Norte de Santander, Colombia. Servimos a toda la region."
+                      text: "MetroPizza cuenta con dos sedes principales: Patios (Gourmet) en la Calle 16 #9-45 y Pinar del Río (Premium) en Barrio Bellavista. Servimos con pasion la autentica tradicion italiana."
                     }
                   },
                   {

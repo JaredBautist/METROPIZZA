@@ -98,7 +98,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
-              href="https://wa.me/573108884489?text=Hola%20MetroPizza,%20me%20gustaria%20hacer%20un%20pedido"
+              href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
               target="_blank"
               className={cn(
                 'group flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 overflow-hidden',
@@ -149,7 +149,7 @@ export default function Navbar() {
           ))}
           <div className="mt-4 pt-4 border-t border-gray-100">
             <Link
-              href="https://wa.me/573108884489?text=Hola%20MetroPizza,%20quiero%20hacer%20un%20pedido"
+              href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
               target="_blank"
               className="flex items-center justify-center gap-2 w-full bg-accent text-text-main px-8 py-4 rounded-xl font-bold shadow-md"
               onClick={() => setMobileMenuOpen(false)}
