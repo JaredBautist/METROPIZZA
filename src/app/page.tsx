@@ -27,6 +27,7 @@ import {
   Globe,
   ChefHat,
   Flag,
+  Fish,
 } from "lucide-react";
 
 export default function Home() {
@@ -249,7 +250,7 @@ export default function Home() {
                       icon={<ChefHat className="w-6 h-6" />}
                       iconColor="text-orange-500"
                       title="Recetas Italianas"
-                      description="Autenticas preparaciones tradicionales de Italia, con ingredientes importados y locales de primera calidad."
+                      description="Auténticas recetas italianas elaboradas con el corazón de nuestra región, usando ingredientes frescos y selectos obtenidos directamente de nuestros campos y mercados locales."
                     />
                     <FeatureCard
                       icon={<Flame className="w-6 h-6" />}
@@ -418,16 +419,16 @@ export default function Home() {
                 </h2>
 
                 <p className="text-gray-400 text-lg">
-                  Recetas tradicionales italianas elaboradas con ingredientes frescos
-                  y amor por la buena cocina.
+                  Auténticas recetas italianas elaboradas con el corazón de nuestra región, 
+                  usando ingredientes frescos y selectos obtenidos directamente de nuestros campos y mercados locales.
                 </p>
               </div>
             </SectionReveal>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 max-w-[1400px] mx-auto">
               {menuData.map((category, categoryIndex) => (
                 <SectionReveal key={category.category} delay={categoryIndex * 100}>
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-orange-500/50 transition-colors duration-300 group">
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-orange-500/50 transition-all duration-300 group h-full flex flex-col">
                     <div className="relative h-48 overflow-hidden">
                       <Image
                         src={category.image}
@@ -940,7 +941,7 @@ export default function Home() {
 const menuData = [
   {
     category: "Pizza Borde Queso",
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=2069&auto=format&fit=crop", // pizza horneada
+    image: "/images/pizza.png", // imagen local de pizza horneada
     icon: Pizza,
     items: [
       { name: "Genovesa", description: "Pollo, champiñón" },
@@ -951,7 +952,7 @@ const menuData = [
   },
   {
     category: "Pizza X Metro",
-    image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=1935&auto=format&fit=crop",
+    image: "/images/lasagna.png", // imagen local para variedad
     icon: Pizza,
     items: [
       { name: "Genovesa", description: "Pollo, champiñón" },
@@ -961,7 +962,7 @@ const menuData = [
   },
   {
     category: "Crepes & Lasagna",
-    image: "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?q=80&w=1935&auto=format&fit=crop",
+    image: "/images/crepe.png",
     icon: Flame,
     items: [
       { name: "Crepe Genovesa", description: "Pollo - champiñón" },
@@ -971,12 +972,22 @@ const menuData = [
   },
   {
     category: "Pastas",
-    image: "https://images.unsplash.com/photo-1621996316521-016d50152f95?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/pasta.png",
     icon: UtensilsCrossed,
     items: [
       { name: "A la Bologna", description: "Carne molida con salsa napolitana" },
       { name: "A la Carbonara", description: "Tocineta, salsa bechamel" },
       { name: "A la Marinera", description: "Camarón-calamar-pulpo-mejillón" },
+    ],
+  },
+  {
+    category: "Ceviches",
+    image: "https://static1.squarespace.com/static/64c58e1fde62886ac69f49d8/66269876b3bfaa7784e8c704/6696e4a16999703beb1329b3/1724683186096/receta-de-camarones-en-salsa-rosada-el-salvador-capitan-marisco-mariscos-frescos-a-domicilio.jpg?format=1500w", 
+    icon: Fish,
+    items: [
+      { name: "Cóctel de Camarones", description: "Camarones frescos con salsa cóctel de la casa" },
+      { name: "Ceviche Mixto", description: "Camarones, pulpo y calamar bañados en leche de tigre" },
+      { name: "Ceviche Peruano", description: "Pescado blanco fresco, cebolla morada y cilantro" },
     ],
   },
 ];
