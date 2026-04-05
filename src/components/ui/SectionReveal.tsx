@@ -55,8 +55,8 @@ export default function SectionReveal({
       className={className}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translate(0)' : getTransform(),
-        transition: `all ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+        transform: isVisible ? 'translate(0) scale(1)' : `${getTransform()} scale(0.95)`,
+        transition: `all ${duration}ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
       }}
     >
       {children}

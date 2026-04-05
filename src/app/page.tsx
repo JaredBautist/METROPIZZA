@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import logoImg from "../../575675898_18095722447794197_4792593760425524262_n.jpg";
 import SectionReveal from "@/components/ui/SectionReveal";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
-import TestimonialCard from "@/components/ui/TestimonialCard";
+import TestimonialCarousel from "@/components/ui/TestimonialCarousel";
 import FeatureCard from "@/components/ui/FeatureCard";
 import Badge from "@/components/ui/Badge";
 import {
@@ -339,7 +339,7 @@ export default function Home() {
                 </h2>
 
                 <p className="text-text-muted text-lg">
-                  Un sueno nacido del amor por la autentica cocina italiana.
+                  Un sueño nacido del amor por la autentica cocina italiana.
                   La mejor tradicion de Napoles en tu mesa.
                 </p>
               </div>
@@ -469,7 +469,7 @@ export default function Home() {
               <div className="mt-12 text-center">
                 <div className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 text-accent rounded-full">
                   <Sparkles className="w-4 h-4" />
-                  <span>Tamanos: Personal, Pequena, Mediana, Grande y Por Metro</span>
+                  <span>Tamaños: Personal, Pequeña, Mediana, Grande y Por Metro</span>
                 </div>
               </div>
             </SectionReveal>
@@ -544,22 +544,14 @@ export default function Home() {
                 </h2>
                 <p className="text-text-muted">
                   Calificacion destacada: <span className="font-bold text-text-main">4.6/5</span> con{" "}
-                  <span className="font-bold text-text-main">605 resenas</span> en Google.
+                  <span className="font-bold text-text-main">605 reseñas</span> en Google.
                 </p>
               </div>
             </SectionReveal>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((t, i) => (
-                <TestimonialCard
-                  key={i}
-                  quote={t.text}
-                  author={t.name}
-                  rating={5}
-                  delay={i * 150}
-                />
-              ))}
-            </div>
+            <SectionReveal delay={200}>
+              <TestimonialCarousel />
+            </SectionReveal>
 
             <SectionReveal delay={500}>
               <div className="mt-12 text-center">
@@ -575,7 +567,7 @@ export default function Home() {
                       }} />
                     ))}
                   </div>
-                  <span className="font-bold text-text-main">Ver 605 resenas en Google</span>
+                  <span className="font-bold text-text-main">Ver 605 reseñas en Google</span>
                   <ArrowRight className="w-5 h-5 text-text-muted" />
                 </Link>
               </div>
@@ -1010,20 +1002,6 @@ const galleryImages = [
 ];
 
 
-const testimonials = [
-  {
-    name: "Stevens Lopesierra",
-    text: "La autentica pizza italiana en Los Patios. El sabor me recuerda a mis vacaciones en Roma. Excelente calidad!",
-  },
-  {
-    name: "Marlene Rivera",
-    text: "Un lugar donde la tradicion italiana se siente en cada plato. Ambiente familiar y servicio calido colombiano.",
-  },
-  {
-    name: "Brayan Stive Zapata",
-    text: "La pizza por metro es espectacular! Perfecta para compartir en familia. Sin duda, lo mejor de la region.",
-  },
-];
 
 function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
   return (
