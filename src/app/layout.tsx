@@ -17,23 +17,22 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'MetroPizza Los Patios | Auténtica Pizza Italiana',
+  title: 'MetroPizza Los Patios y Cúcuta | Auténtica Pizza Italiana por Metro',
   description:
-    'Descubre el sabor de Italia en Los Patios, Norte de Santander. Pizza por metro al estilo italiano, pastas artesanales, lasañas y crepes. 10+ años de tradición gastronómica. Reserva: +57 310 888 4489',
+    'Disfruta la mejor pizza artesanal en Los Patios y Cúcuta. MetroPizza ofrece pizza por metro, pastas italianas y lasañas con el sabor tradicional de Italia. ¡Pide ahora en el área metropolitana!',
   keywords: [
     'pizza italiana Los Patios',
-    'restaurante italiano',
+    'pizza cucuta',
+    'pizzeria los patios',
+    'restaurante italiano cucuta',
     'pizza por metro Norte de Santander',
-    'MetroPizza Los Patios',
-    'auténtica pizza italiana',
-    'pastas artesanales',
-    'restaurante italiano pizzería',
-    'comida italiana',
-    'pizza napolitana',
-    'lasagna casera',
+    'MetroPizza Colombia',
+    'comida italiana los patios',
+    'domicilios de pizza cucuta',
+    'mejor pizza de cucuta',
   ],
   authors: [{ name: 'MetroPizza' }],
-  creator: 'MetroPizza Los Patios',
+  creator: 'MetroPizza Colombia',
   publisher: 'MetroPizza',
   robots: {
     index: true,
@@ -47,32 +46,32 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'MetroPizza Los Patios | Auténtica Pizza Italiana',
+    title: 'MetroPizza Los Patios y Cúcuta | Sabor Italiano Real',
     description:
-      'El auténtico sabor de Italia en Los Patios. Pizza por metro, pastas artesanales y lasañas. Tradición 100% italiana.',
+      'La mejor pizza por metro de Norte de Santander. Auténtica tradición italiana en Los Patios y Cúcuta. ¡Haz tu pedido hoy!',
     type: 'website',
     locale: 'es_CO',
-    siteName: 'MetroPizza Los Patios',
-    url: 'https://metropizza.com',
+    siteName: 'MetroPizza Colombia',
+    url: 'https://metropizzacol.com',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1552832230-c0197dd311f5?q=80&w=1996&auto=format&fit=crop',
         width: 1200,
         height: 630,
-        alt: 'MetroPizza - Auténtica Pizza Italiana en Los Patios',
+        alt: 'MetroPizza - Pizza Italiana en Los Patios y Cúcuta',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MetroPizza Los Patios | Pizza Italiana Auténtica',
-    description: 'Descubre el sabor de Italia en Los Patios. Pizza por metro, pastas y lasañas.',
+    title: 'MetroPizza | Pizza y Pasta en Los Patios y Cúcuta',
+    description: 'Sabor 100% italiano en el área metropolitana de Cúcuta. Pizza por metro, pastas y más.',
     images: ['https://images.unsplash.com/photo-1552832230-c0197dd311f5?q=80&w=1996&auto=format&fit=crop'],
   },
   alternates: {
-    canonical: 'https://metropizza.com',
+    canonical: 'https://metropizzacol.com',
     languages: {
-      'es-CO': 'https://metropizza.com',
+      'es-CO': 'https://metropizzacol.com',
     },
   },
   category: 'restaurant',
@@ -86,10 +85,9 @@ export const metadata: Metadata = {
     address: true,
   },
   other: {
-    'google-site-verification': 'your-verification-code',
-    'msvalidate.01': 'your-bing-verification',
+    'google-site-verification': 'google9285a1ae083335fe',
     'geo.region': 'CO-NST',
-    'geo.placename': 'Los Patios',
+    'geo.placename': 'Los Patios, Cúcuta',
     'geo.position': '7.8389;-72.5039',
     'ICBM': '7.8389, -72.5039',
   },

@@ -33,6 +33,60 @@ import {
 export default function Home() {
   return (
     <>
+      <Script id="local-business-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "PizzaRestaurant",
+          "name": "MetroPizza Colombia",
+          "image": "https://metropizzacol.com/logo.jpg",
+          "@id": "https://metropizzacol.com",
+          "url": "https://metropizzacol.com",
+          "telephone": "+573108884489",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. 10 # 2-34",
+            "addressLocality": "Los Patios",
+            "addressRegion": "Norte de Santander",
+            "postalCode": "544570",
+            "addressCountry": "CO"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 7.8389,
+            "longitude": -72.5039
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "16:00",
+              "closes": "23:00"
+            }
+          ],
+          "menu": "https://metropizzacol.com/#menu",
+          "servesCuisine": ["Italian", "Pizza"],
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Los Patios"
+            },
+            {
+              "@type": "City",
+              "name": "Cúcuta"
+            }
+          ],
+          "hasMap": "https://www.google.com/maps?cid=YOUR_BUSINESS_CID"
+        })}
+      </Script>
       <main className="min-h-screen overflow-x-hidden relative">
         {/* Fondo Fijo del Coliseo Romano estilo Marca de Agua */}
         <div className="fixed inset-0 z-[-1] bg-bg-light">
