@@ -37,7 +37,7 @@ export default function Home() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "PizzaRestaurant",
-          "name": "MetroPizza Colombia",
+          "name": "MetroPizza - La Mejor Pizza en Cúcuta y Los Patios",
           "image": "https://metropizzacol.com/logo.jpg",
           "@id": "https://metropizzacol.com",
           "url": "https://metropizzacol.com",
@@ -800,9 +800,9 @@ export default function Home() {
             "@graph": [
               {
                 "@type": "Restaurant",
-                "@id": "https://metropizza.com/#restaurant",
-                name: "MetroPizza Los Patios",
-                description: "Autentica pizza italiana en Los Patios, Norte de Santander. Recetas tradicionales de Italia elaboradas al horno.",
+                "@id": "https://metropizzacol.com/#restaurant",
+                name: "MetroPizza - La Mejor Pizza en Cúcuta y Los Patios",
+                description: "La mejor pizza en Cúcuta y pizza en Los Patios domicilios. Especialistas en pizza por metro, pizza gigante para fiestas y pizza artesanal. ¡Pizzerías abiertas ya con promociones!",
                 image: "https://images.unsplash.com/photo-1552832230-c0197dd311f5?q=80&w=1996&auto=format&fit=crop",
                 telephone: "+57 310 8884489",
                 email: "contacto@metropizza.com",
@@ -842,12 +842,12 @@ export default function Home() {
               },
               {
                 "@type": "WebSite",
-                "@id": "https://metropizza.com/#website",
-                url: "https://metropizza.com",
-                name: "MetroPizza Los Patios",
-                description: "Autentica pizza 100% italiana. Pizza por metro, pastas y lasanas.",
+                "@id": "https://metropizzacol.com/#website",
+                url: "https://metropizzacol.com",
+                name: "MetroPizza - Domicilios de Pizza en Cúcuta y Patios",
+                description: "Pide la mejor pizza por metro en Cúcuta. Auténtica pizza 100% italiana y artesanal recomendada. Promociones de pizza hoy.",
                 publisher: {
-                  "@id": "https://metropizza.com/#restaurant",
+                  "@id": "https://metropizzacol.com/#restaurant",
                 },
                 potentialAction: {
                   "@type": "SearchAction",
@@ -869,7 +869,7 @@ export default function Home() {
                 about: {
                   "@id": "https://metropizza.com/#restaurant",
                 },
-                description: "Descubre el sabor de Italia en Los Patios. Pizza por metro, pastas artesanales y lasanas. Tradicion 100% italiana.",
+                description: "Descubre la mejor pizza en Cúcuta y Los Patios. Pizza por metro artesanal, pizza gigante para fiestas, promociones y domicilios.",
                 inLanguage: "es-CO",
               },
               {

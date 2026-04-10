@@ -24,19 +24,19 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: 'MetroPizza Los Patios y Cúcuta | Auténtica Pizza Italiana por Metro',
+  title: 'La Mejor Pizza en Cúcuta y Los Patios | Domicilios | MetroPizza',
   description:
-    'Disfruta la mejor pizza artesanal en Los Patios y Cúcuta. MetroPizza ofrece pizza por metro, pastas italianas y lasañas con el sabor tradicional de Italia. ¡Pide ahora en el área metropolitana!',
+    'Pide la mejor pizza en Cúcuta y pizza Los Patios domicilios. Disfruta nuestra famosa pizza por metro, pizza gigante para fiestas y pizza artesanal. ¡Pizzerías en Cúcuta abiertas ya!',
   keywords: [
-    'pizza italiana Los Patios',
-    'pizza cucuta',
+    'la mejor pizza en cucuta',
+    'pizza los patios domicilios',
+    'pizzerias en cucuta abiertas ya',
+    'pizza por metro cucuta',
+    'pizza gigante para fiestas',
+    'pizza artesanal cucuta',
+    'promociones de pizza hoy cucuta',
     'pizzeria los patios',
-    'restaurante italiano cucuta',
-    'pizza por metro Norte de Santander',
-    'MetroPizza Colombia',
-    'comida italiana los patios',
     'domicilios de pizza cucuta',
-    'mejor pizza de cucuta',
   ],
   authors: [{ name: 'MetroPizza' }],
   creator: 'MetroPizza Colombia',
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'MetroPizza Los Patios y Cúcuta | Sabor Italiano Real',
+    title: 'MetroPizza | La Mejor Pizza en Cúcuta y Los Patios',
     description:
-      'La mejor pizza por metro de Norte de Santander. Auténtica tradición italiana en Los Patios y Cúcuta. ¡Haz tu pedido hoy!',
+      'Auténtica pizza por metro en Cúcuta y Los Patios. Pide tu pizza artesanal a domicilio, ideal para tamaño familiar y comuniones. ¡Abiertos ya!',
     type: 'website',
     locale: 'es_CO',
     siteName: 'MetroPizza Colombia',
