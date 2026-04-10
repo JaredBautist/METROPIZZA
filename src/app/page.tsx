@@ -159,10 +159,10 @@ export default function Home() {
             </SectionReveal>
 
             <SectionReveal delay={100}>
-              <h1 className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-4 leading-tight drop-shadow-2xl tracking-tight">
+              <h1 className="font-script text-8xl sm:text-9xl md:text-[10rem] lg:text-[12rem] text-white mb-4 leading-none drop-shadow-2xl">
                 Metro <span className="text-accent">Pizza</span>
               </h1>
-              <h2 className="font-heading text-2xl md:text-4xl text-accent italic mb-8 drop-shadow-lg">
+              <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl text-accent italic mb-8 drop-shadow-lg">
                 ¡El sabor a tu medida!
               </h2>
             </SectionReveal>
@@ -177,7 +177,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href="#menu" className="btn btn-primary text-lg px-10 py-4">
                   <UtensilsCrossed className="w-5 h-5 mr-2" />
-                  Ver la Carta
+                  Nuestros favoritos 
                 </Link>
                 <Link
                   href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
@@ -708,7 +708,7 @@ export default function Home() {
           <div className="section-container pb-8">
             <div className="grid md:grid-cols-3 gap-12 border-b border-white/10 pb-12">
               <div>
-                <Link href="#inicio" className="flex items-center gap-3 font-heading font-black text-3xl tracking-tight mb-6">
+                <Link href="#inicio" className="flex items-center gap-3 font-script text-4xl mb-6">
                   <Image
                     src={logoImg}
                     alt="Metro Pizza Logo"

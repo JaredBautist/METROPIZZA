@@ -53,6 +53,10 @@
     text-wrap: balance;
   }
 
+  .font-script {
+    font-family: var(--font-great-vibes), cursive;
+  }
+
   p {
     text-wrap: pretty;
   }

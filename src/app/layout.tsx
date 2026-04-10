@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Outfit, Playfair_Display } from 'next/font/google';
+import { Outfit, Playfair_Display, Great_Vibes } from 'next/font/google';
 import './globals.css';
 
 const outfit = Outfit({
@@ -13,6 +13,13 @@ const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
   weight: ['600', '800'],
+  display: 'swap',
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ['latin'],
+  variable: '--font-great-vibes',
+  weight: ['400'],
   display: 'swap',
 });
 
@@ -109,7 +116,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es-CO" className={`${outfit.variable} ${playfair.variable} scroll-smooth`}>
+    <html lang="es-CO" className={`${outfit.variable} ${playfair.variable} ${greatVibes.variable} scroll-smooth`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

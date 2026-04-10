@@ -72,8 +72,8 @@ export default function Navbar() {
               )}
             </div>
             <span className={cn(
-              "font-heading font-black tracking-tight transition-all duration-500",
-              isScrolled ? "text-xl translate-x-0" : "text-3xl -translate-x-1"
+              "font-script tracking-normal transition-all duration-500",
+              isScrolled ? "text-2xl translate-x-0" : "text-4xl -translate-x-1"
             )}>
               Metro<span className={cn("transition-colors duration-500", isScrolled ? "text-primary" : "text-accent")}>Pizza</span>
             </span>
