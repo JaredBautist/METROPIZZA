@@ -106,10 +106,14 @@ export default function Home() {
         >
           {/* Background with Italian vibes */}
           <div className="absolute inset-0 z-0">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=2069&auto=format&fit=crop"
-              alt="Autentica pizza horno"
-              className="w-full h-full object-cover"
+              alt="Pizza artesanal italiana horó en Los Patios Cúcuta Norte de Santander"
+              fill
+              priority
+              fetchPriority="high"
+              className="object-cover"
+              unoptimized
             />
             {/* Overlay gradient - Natural Food Contrast */}
             <div className="absolute inset-0 bg-black/40" />
@@ -177,7 +181,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href="#menu" className="btn btn-primary text-lg px-10 py-4">
                   <UtensilsCrossed className="w-5 h-5 mr-2" />
-                  Nuestros favoritos 
+                  Nuestros Favoritos  
                 </Link>
                 <Link
                   href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
@@ -185,7 +189,7 @@ export default function Home() {
                   className="btn btn-ghost text-lg"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Pedir Ahora
+                  Pedir Pizza a Domicilio
                 </Link>
               </div>
             </SectionReveal>
@@ -224,18 +228,25 @@ export default function Home() {
                       <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl group">
                         <Image
                           src="/images/pizza.png"
-                          alt="Pizza artesanal italiana"
+                          alt="Pizza gigante por metro recién horneada en Los Patios Norte de Santander"
                           fill
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                          loading="lazy"
+                          decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-orange-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
                       <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl group">
-                        <Image
+                          <Image
                           src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=2070&auto=format&fit=crop"
-                          alt="Ingredientes frescos"
+                          alt="Ingredientes frescos para pizzas italianas en Cúcuta"
                           fill
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                          loading="lazy"
+                          decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
+                          unoptimized
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
@@ -244,8 +255,11 @@ export default function Home() {
                       <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl group">
                         <Image
                           src="/images/pasta.png"
-                          alt="Pasta fresca italiana"
+                          alt="Pasta fresca artesanal a domicilio en Los Patios"
                           fill
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                          loading="lazy"
+                          decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -253,8 +267,11 @@ export default function Home() {
                       <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl group">
                         <Image
                           src="/images/lasagna.png"
-                          alt="Lasana casera estilo italiano"
+                          alt="Auténtica lasaña italiana a domicilio en Cúcuta"
                           fill
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                          loading="lazy"
+                          decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -317,10 +334,10 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4 pt-4">
                     <Link href="#menu" className="btn btn-primary">
                       <UtensilsCrossed className="w-5 h-5 mr-2" />
-                      Ver Menu
+                      Ver Menu Recomendado
                     </Link>
                     <Link href="#historia" className="btn btn-secondary">
-                      Nuestra Historia
+                      Nuestra Historia 
                     </Link>
                   </div>
                 </div>
@@ -389,7 +406,7 @@ export default function Home() {
                 </Badge>
 
                 <h2 className="font-heading text-4xl md:text-5xl text-text-main mt-6 mb-6">
-                  La verdadera <span className="text-primary">pizza italiana a tu alcance</span>
+                  La verdadera <span className="text-primary">pizza italiana en Cúcuta y Los Patios</span>
                 </h2>
 
                 <p className="text-text-muted text-lg">

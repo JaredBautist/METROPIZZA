@@ -71,8 +71,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MetroPizza | Pizza y Pasta en Los Patios y Cúcuta',
-    description: 'Sabor 100% italiano en el área metropolitana de Cúcuta. Pizza por metro, pastas y más.',
+    title: 'MetroPizza | La Mejor Pizza a Domicilio en Cúcuta y Los Patios',
+    description: 'Pizza por metro, pizza gigante para fiestas y pizza artesanal. ¡Domícilios en Cúcuta y Los Patios abiertos ya!',
     images: ['https://images.unsplash.com/photo-1552832230-c0197dd311f5?q=80&w=1996&auto=format&fit=crop'],
   },
   alternates: {
@@ -120,6 +120,12 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preload"
+          as="image"
+          href="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=2069&auto=format&fit=crop"
+          fetchPriority="high"
+        />
         <meta name="geo.region" content="CO-NST" />
         <meta name="geo.placename" content="Los Patios, Norte de Santander" />
         <meta name="geo.position" content="7.8389;-72.5039" />
