@@ -28,6 +28,9 @@
   --color-text-main:  #1C1917;
   --color-text-muted: #57534E;
   --color-text-light: #FFFBF0;
+  --color-surface:    #FFFFFF;
+  --color-surface-alt:#FFF8E7;
+  --color-focus-ring: #E31B22;
 
   /* Alias Italy (compatibilidad con clases ya en uso en page.tsx) */
   --color-italy-red:   #E31B22;
@@ -104,6 +107,11 @@
   /* Ghost - sobre fondos oscuros */
   .btn-ghost {
     @apply bg-white/10 text-white border border-white/30 backdrop-blur-sm hover:bg-white/20 hover:-translate-y-0.5;
+  }
+
+  /* Sede selector CTA */
+  .btn-sede {
+    @apply bg-white/95 text-text-main border border-white/70 font-bold shadow-[0_4px_14px_rgba(0,0,0,0.12)] hover:bg-white hover:-translate-y-0.5;
   }
 
   /* ---- Layout ---- */
@@ -218,7 +226,7 @@
 }
 
 *:focus-visible {
-  outline: 2px solid #E31B22;
+  outline: 2px solid var(--color-focus-ring);
   outline-offset: 2px;
 }
 

@@ -106,12 +106,7 @@ export default function Navbar() {
             <Link
               href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
               target="_blank"
-              className={cn(
-                'group relative flex items-center gap-2 px-8 py-3 rounded-full font-bold transition-all duration-500 overflow-hidden shadow-lg hover:shadow-primary/20',
-                isScrolled
-                  ? 'bg-primary text-white hover:bg-primary-dark hover:-translate-y-1'
-                  : 'bg-accent text-text-main hover:bg-accent-dark hover:-translate-y-1'
-              )}
+              className="group relative flex items-center gap-2 px-8 py-3 rounded-full font-bold transition-all duration-500 overflow-hidden shadow-lg hover:shadow-primary/20 bg-primary text-white hover:bg-primary-dark hover:-translate-y-1"
             >
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               <PhoneCall className="relative z-10 w-4 h-4 transition-transform group-hover:rotate-[360deg] duration-700" />

@@ -30,6 +30,25 @@ import {
   Fish,
 } from "lucide-react";
 
+const locationMenus = [
+  {
+    name: "Los Patios",
+    type: "Sede Gourmet",
+    description: "Explora la carta completa de Los Patios.",
+    menuUrl: "https://menupatios.vercel.app/",
+    labelClass: "text-primary/90 bg-primary/15",
+    buttonClass: "btn btn-ghost",
+  },
+  {
+    name: "Pinar del Río",
+    type: "Sede Premium",
+    description: "Revisa el menú premium de Pinar del Río.",
+    menuUrl: "https://menupinar.vercel.app/",
+    labelClass: "text-accent bg-accent/15",
+    buttonClass: "btn btn-ghost",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -348,12 +367,9 @@ export default function Home() {
 
         {/* Stats Section */}
         <section className="py-20 bg-white/10 backdrop-blur-[2px] relative overflow-hidden shadow-lg border-y border-white/20">
-          {/* Decorative Italian flag stripe */}
-          <div className="absolute top-0 left-0 right-0 h-2 flex">
-            <div className="flex-1 bg-orange-500" />
-            <div className="flex-1 bg-white" />
-            <div className="flex-1 bg-primary" />
-          </div>
+          {/* Premium divider */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/90 to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-[#D4AF37]/15 to-transparent pointer-events-none" />
 
           <div className="section-container">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -378,12 +394,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Decorative Italian flag stripe bottom */}
-          <div className="absolute bottom-0 left-0 right-0 h-2 flex opacity-70">
-            <div className="flex-1 bg-orange-500" />
-            <div className="flex-1 bg-white" />
-            <div className="flex-1 bg-primary" />
-          </div>
+          {/* Premium divider */}
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/75 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-[#D4AF37]/10 to-transparent pointer-events-none" />
         </section>
 
         {/* History Section */}
@@ -471,12 +484,8 @@ export default function Home() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl" />
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
 
-          {/* Italian flag decorative border */}
-          <div className="absolute top-40 left-0 right-0 h-1 flex opacity-30">
-            <div className="flex-1 bg-orange-500" />
-            <div className="flex-1 bg-white" />
-            <div className="flex-1 bg-primary" />
-          </div>
+          {/* Premium divider */}
+          <div className="absolute top-40 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/45 to-transparent" />
 
           <div className="section-container relative z-10">
             <SectionReveal>
@@ -544,6 +553,43 @@ export default function Home() {
                 </div>
               </div>
             </SectionReveal>
+
+            <SectionReveal delay={600}>
+              <div className="mt-10 max-w-4xl mx-auto rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-5 md:p-6">
+                <div className="text-center">
+                  <Badge variant="secondary" icon={<MapPin className="w-4 h-4" />}>
+                    Menú Por Sede
+                  </Badge>
+                  <p className="text-white/80 mt-3">
+                    Elige tu localidad para ver la carta completa y actualizada.
+                  </p>
+                </div>
+
+                <div className="mt-5 grid sm:grid-cols-2 gap-3">
+                  {locationMenus.map((location) => (
+                    <article
+                      key={location.name}
+                      className="rounded-2xl border border-white/10 p-4 bg-white/5 backdrop-blur-sm"
+                    >
+                      <p className={`inline-flex px-2.5 py-1 rounded-full text-xs uppercase tracking-widest font-semibold ${location.labelClass}`}>
+                        {location.type}
+                      </p>
+                      <h3 className="font-heading text-xl text-white mt-3">{location.name}</h3>
+                      <p className="text-white/75 text-sm mt-1">{location.description}</p>
+                      <Link
+                        href={location.menuUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${location.buttonClass} mt-4 w-full`}
+                      >
+                        Ver menú
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </SectionReveal>
           </div>
         </section>
 
@@ -559,12 +605,9 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" />
           </div>
-          {/* Italian flag decorative top border */}
-          <div className="absolute top-0 left-0 right-0 h-2 flex opacity-80">
-            <div className="flex-1 bg-orange-500" />
-            <div className="flex-1 bg-white" />
-            <div className="flex-1 bg-primary" />
-          </div>
+          {/* Premium divider */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-5 bg-gradient-to-b from-[#D4AF37]/10 to-transparent pointer-events-none" />
 
           <div className="section-container">
             <SectionReveal>
@@ -665,18 +708,36 @@ export default function Home() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto gap-8">
               {[
-                { name: "Patios (Gourmet)", address: "Cl. 16 #9-45", city: "Los Patios, Norte de Santander" },
-                { name: "Pinar del Río (Premium)", address: "Barrio Bellavista", city: "Cúcuta, Norte de Santander" },
+                {
+                  name: "Patios (Gourmet)",
+                  address: "Cl. 16 #9-45",
+                  city: "Los Patios, Norte de Santander",
+                  mapsUrl: "https://maps.app.goo.gl/4Nz3Yi44ab4u963X6",
+                },
+                {
+                  name: "Pinar del Río (Premium)",
+                  address: "Barrio Bellavista",
+                  city: "Cúcuta, Norte de Santander",
+                  mapsUrl: "https://maps.app.goo.gl/taQKGG7XHC1PyM3N8",
+                },
               ].map((branch, i) => (
                 <SectionReveal key={i} delay={i * 100}>
-                  <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:border-primary transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary">
-                      <MapPin className="w-6 h-6" />
+                  <Link
+                    href={branch.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Abrir ubicación de ${branch.name} en Google Maps`}
+                    className="block h-full"
+                  >
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:border-primary transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary">
+                        <MapPin className="w-6 h-6" />
+                      </div>
+                      <h3 className="font-bold text-xl text-text-main mb-2">{branch.name}</h3>
+                      <p className="text-text-muted flex-grow">{branch.address}</p>
+                      <p className="text-text-muted mt-1 font-medium text-sm border-t border-gray-100 pt-3">{branch.city}</p>
                     </div>
-                    <h3 className="font-bold text-xl text-text-main mb-2">{branch.name}</h3>
-                    <p className="text-text-muted flex-grow">{branch.address}</p>
-                    <p className="text-text-muted mt-1 font-medium text-sm border-t border-gray-100 pt-3">{branch.city}</p>
-                  </div>
+                  </Link>
                 </SectionReveal>
               ))}
             </div>
@@ -685,12 +746,9 @@ export default function Home() {
 
         {/* Footer */}
         <footer id="contacto" className="bg-bg-dark text-white relative">
-          {/* Italian flag border */}
-          <div className="absolute top-0 left-0 right-0 h-1 flex">
-            <div className="flex-1 bg-orange-500" />
-            <div className="flex-1 bg-white" />
-            <div className="flex-1 bg-primary" />
-          </div>
+          {/* Premium divider */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/85 to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-5 bg-gradient-to-b from-[#D4AF37]/10 to-transparent pointer-events-none" />
 
           {/* CTA Banner - Subido más por petición del usuario */}
           <div className="relative z-10 -mt-12 md:mt-0 md:-translate-y-1/2">
