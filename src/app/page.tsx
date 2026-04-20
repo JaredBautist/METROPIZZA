@@ -36,7 +36,7 @@ const locationMenus = [
     type: "Sede Gourmet",
     description: "Explora la carta completa de Los Patios.",
     menuUrl: "https://menupatios.vercel.app/",
-    labelClass: "text-primary/90 bg-primary/15",
+    labelClass: "text-white/85 bg-white/10",
     buttonClass: "btn btn-ghost",
   },
   {
@@ -44,7 +44,7 @@ const locationMenus = [
     type: "Sede Premium",
     description: "Revisa el menú premium de Pinar del Río.",
     menuUrl: "https://menupinar.vercel.app/",
-    labelClass: "text-accent bg-accent/15",
+    labelClass: "text-white/85 bg-white/10",
     buttonClass: "btn btn-ghost",
   },
 ];
@@ -192,7 +192,7 @@ export default function Home() {
 
             <SectionReveal delay={150}>
               <p className="text-2xl md:text-3xl text-white/80 font-light italic mb-3 drop-shadow-md tracking-wide">
-                Autentica tradicion italiana en cada bocado
+                Auténtica masa, horno y sabor que sí se nota
               </p>
             </SectionReveal>
 
@@ -200,7 +200,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href="#menu" className="btn btn-primary text-lg px-10 py-4">
                   <UtensilsCrossed className="w-5 h-5 mr-2" />
-                  Nuestros Favoritos  
+                  Nuestros Favoritos
                 </Link>
                 <Link
                   href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
@@ -356,7 +356,7 @@ export default function Home() {
                       Ver Menu Recomendado
                     </Link>
                     <Link href="#historia" className="btn btn-secondary">
-                      Nuestra Historia 
+                      Nuestra Historia
                     </Link>
                   </div>
                 </div>
@@ -569,7 +569,7 @@ export default function Home() {
                   {locationMenus.map((location) => (
                     <article
                       key={location.name}
-                      className="rounded-2xl border border-white/10 p-4 bg-white/5 backdrop-blur-sm"
+                      className="rounded-2xl border border-white/10 p-4 bg-white/5 backdrop-blur-sm hover:border-white/20 transition-colors duration-300"
                     >
                       <p className={`inline-flex px-2.5 py-1 rounded-full text-xs uppercase tracking-widest font-semibold ${location.labelClass}`}>
                         {location.type}

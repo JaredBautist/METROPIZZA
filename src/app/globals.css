@@ -47,12 +47,16 @@
   body {
     @apply bg-bg-light text-text-main antialiased;
     font-feature-settings: "kern" 1, "liga" 1;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, .font-heading {
     @apply font-serif;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
     text-wrap: balance;
   }
 
@@ -72,7 +76,7 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-center transition-all duration-300 relative overflow-hidden;
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-center transition-all duration-200 relative overflow-hidden;
   }
 
   .btn::before {
@@ -86,17 +90,17 @@
 
   /* Rojo */
   .btn-primary {
-    @apply bg-primary text-white shadow-[0_4px_20px_rgba(227,27,34,0.4)] hover:bg-primary-dark hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(227,27,34,0.55)];
+    @apply bg-primary text-white shadow-[0_4px_20px_rgba(227,27,34,0.32)] hover:bg-primary-dark hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(227,27,34,0.42)];
   }
 
   /* Naranja */
   .btn-secondary {
-    @apply bg-secondary text-white shadow-[0_4px_20px_rgba(249,115,22,0.3)] hover:bg-secondary-light hover:-translate-y-1;
+    @apply bg-secondary text-white shadow-[0_4px_20px_rgba(249,115,22,0.24)] hover:bg-secondary-light hover:-translate-y-0.5;
   }
 
   /* Amarillo */
   .btn-accent {
-    @apply bg-accent text-text-main font-bold shadow-[0_4px_20px_rgba(254,212,1,0.5)] hover:bg-accent-dark hover:-translate-y-1;
+    @apply bg-accent text-text-main font-bold shadow-[0_4px_20px_rgba(254,212,1,0.38)] hover:bg-accent-dark hover:-translate-y-0.5;
   }
 
   /* WhatsApp */
@@ -106,7 +110,7 @@
 
   /* Ghost - sobre fondos oscuros */
   .btn-ghost {
-    @apply bg-white/10 text-white border border-white/30 backdrop-blur-sm hover:bg-white/20 hover:-translate-y-0.5;
+    @apply bg-white/10 text-white border border-white/25 backdrop-blur-sm hover:bg-white/16 hover:-translate-y-0.5;
   }
 
   /* Sede selector CTA */
@@ -190,7 +194,7 @@
 
 @keyframes float {
   0%, 100% { transform: translateY(0)     rotate(0deg); }
-  50%       { transform: translateY(-20px) rotate(2deg); }
+  50%       { transform: translateY(-10px) rotate(1deg); }
 }
 
 @keyframes pulse-soft {
@@ -232,4 +236,13 @@
 
 @media print {
   .no-print { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

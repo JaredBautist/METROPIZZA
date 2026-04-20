@@ -15,12 +15,17 @@ export default function SectionReveal({
   className = '',
   delay = 0,
   direction = 'up',
-  duration = 800,
+  duration = 650,
 }: SectionRevealProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setReduceMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -40,12 +45,12 @@ export default function SectionReveal({
 
   const getTransform = () => {
     switch (direction) {
-      case 'up': return 'translateY(40px)';
-      case 'down': return 'translateY(-40px)';
-      case 'left': return 'translateX(40px)';
-      case 'right': return 'translateX(-40px)';
+      case 'up': return 'translateY(22px)';
+      case 'down': return 'translateY(-22px)';
+      case 'left': return 'translateX(22px)';
+      case 'right': return 'translateX(-22px)';
       case 'fade': return 'translateY(0)';
-      default: return 'translateY(40px)';
+      default: return 'translateY(22px)';
     }
   };
 
@@ -55,8 +60,10 @@ export default function SectionReveal({
       className={className}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translate(0) scale(1)' : `${getTransform()} scale(0.95)`,
-        transition: `all ${duration}ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
+        transform: isVisible ? 'translate(0) scale(1)' : `${getTransform()} scale(0.985)`,
+        transition: reduceMotion
+          ? `opacity 250ms ease ${delay}ms`
+          : `all ${duration}ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
       }}
     >
       {children}

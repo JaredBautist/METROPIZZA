@@ -47,7 +47,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed w-full z-50 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]',
+        'fixed w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]',
         isScrolled
           ? 'bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] py-3 text-text-main border-b border-gray-100'
           : 'bg-gradient-to-b from-black/70 via-black/20 to-transparent py-5 text-white'
@@ -62,7 +62,7 @@ export default function Navbar() {
                 src={logoImg} 
                 alt="Metro Pizza Logo" 
                 className={cn(
-                  'w-auto transition-all duration-500 group-hover:rotate-[360deg] object-cover rounded-full shadow-2xl border-2 border-white/20',
+                  'w-auto transition-all duration-500 group-hover:scale-105 object-cover rounded-full shadow-2xl border-2 border-white/20',
                   isScrolled ? 'h-10 w-10' : 'h-16 w-16'
                 )}
                 unoptimized
@@ -106,10 +106,10 @@ export default function Navbar() {
             <Link
               href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
               target="_blank"
-              className="group relative flex items-center gap-2 px-8 py-3 rounded-full font-bold transition-all duration-500 overflow-hidden shadow-lg hover:shadow-primary/20 bg-primary text-white hover:bg-primary-dark hover:-translate-y-1"
+              className="group relative flex items-center gap-2 px-8 py-3 rounded-full font-bold transition-all duration-300 overflow-hidden shadow-lg hover:shadow-primary/20 bg-primary text-white hover:bg-primary-dark hover:-translate-y-0.5"
             >
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-              <PhoneCall className="relative z-10 w-4 h-4 transition-transform group-hover:rotate-[360deg] duration-700" />
+              <PhoneCall className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:scale-105" />
               <span className="relative z-10">Pedir Ahora</span>
             </Link>
           </div>
