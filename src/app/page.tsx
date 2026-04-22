@@ -198,14 +198,14 @@ export default function Home() {
 
             <SectionReveal delay={300}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link href="#menu" className="btn btn-primary text-lg px-10 py-4">
+                <Link href="#menu" className="btn btn-primary text-lg px-10 py-4 touch-target w-full sm:w-auto">
                   <UtensilsCrossed className="w-5 h-5 mr-2" />
                   Nuestros Favoritos
                 </Link>
                 <Link
-                  href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
+                  href="https://linktr.ee/MetroPizzaGyP"
                   target="_blank"
-                  className="btn btn-ghost text-lg"
+                  className="btn btn-ghost text-lg px-10 py-4 touch-target w-full sm:w-auto"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Pedir Pizza a Domicilio
@@ -242,26 +242,27 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <SectionReveal direction="left">
                 <div className="relative">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-4">
-                      <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl group">
+                  {/* Mobile: scroll horizontal snap | Desktop: grid 2 columnas */}
+                  <div className="flex sm:grid sm:grid-cols-2 gap-4 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0 snap-x snap-mandatory scroll-smooth">
+                    <div className="flex sm:flex flex-col gap-4 min-w-[72vw] sm:min-w-0 snap-start">
+                      <div className="relative h-52 sm:h-64 rounded-2xl overflow-hidden shadow-xl group flex-shrink-0">
                         <Image
                           src="/images/pizza.png"
                           alt="Pizza gigante por metro recién horneada en Los Patios Norte de Santander"
                           fill
-                          sizes="(max-width: 768px) 50vw, 25vw"
+                          sizes="(max-width: 768px) 70vw, 25vw"
                           loading="lazy"
                           decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-orange-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
-                      <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl group">
-                          <Image
+                      <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden shadow-xl group flex-shrink-0">
+                        <Image
                           src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=2070&auto=format&fit=crop"
                           alt="Ingredientes frescos para pizzas italianas en Cúcuta"
                           fill
-                          sizes="(max-width: 768px) 50vw, 25vw"
+                          sizes="(max-width: 768px) 70vw, 25vw"
                           loading="lazy"
                           decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -270,25 +271,25 @@ export default function Home() {
                         <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
                     </div>
-                    <div className="space-y-4 pt-8">
-                      <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl group">
+                    <div className="flex sm:flex flex-col gap-4 sm:pt-8 min-w-[72vw] sm:min-w-0 snap-start">
+                      <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden shadow-xl group flex-shrink-0">
                         <Image
                           src="/images/pasta.png"
                           alt="Pasta fresca artesanal a domicilio en Los Patios"
                           fill
-                          sizes="(max-width: 768px) 50vw, 25vw"
+                          sizes="(max-width: 768px) 70vw, 25vw"
                           loading="lazy"
                           decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
-                      <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl group">
+                      <div className="relative h-52 sm:h-64 rounded-2xl overflow-hidden shadow-xl group flex-shrink-0">
                         <Image
                           src="/images/lasagna.png"
                           alt="Auténtica lasaña italiana a domicilio en Cúcuta"
                           fill
-                          sizes="(max-width: 768px) 50vw, 25vw"
+                          sizes="(max-width: 768px) 70vw, 25vw"
                           loading="lazy"
                           decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -298,8 +299,8 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Floating rating badge */}
-                  <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-xl border-l-4 border-orange-500">
+                  {/* Floating rating badge — debajo del grid en mobile para no cortarse */}
+                  <div className="sm:absolute sm:-bottom-6 sm:-right-6 mt-4 sm:mt-0 bg-white rounded-2xl p-4 shadow-xl border-l-4 border-orange-500 w-fit">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-primary rounded-xl flex items-center justify-center">
                         <Award className="w-6 h-6 text-white" />
@@ -508,8 +509,9 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 max-w-[1400px] mx-auto">
               {menuData.map((category, categoryIndex) => (
                 <SectionReveal key={category.category} delay={categoryIndex * 100}>
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-orange-500/50 transition-all duration-300 group h-full flex flex-col">
-                    <div className="relative h-48 overflow-hidden">
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-orange-500/50 transition-all duration-300 group h-full flex flex-col press-scale">
+                    {/* Imagen más corta en mobile */}
+                    <div className="relative h-36 sm:h-48 overflow-hidden">
                       <Image
                         src={category.image}
                         alt={category.category}
@@ -517,25 +519,26 @@ export default function Home() {
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
-                      <div className="absolute bottom-4 left-4">
-                        <h3 className="font-heading text-2xl font-bold flex items-center gap-2">
-                          <category.icon className="w-6 h-6 text-orange-500" />
+                      <div className="absolute bottom-3 left-3">
+                        <h3 className="font-heading text-xl sm:text-2xl font-bold flex items-center gap-2">
+                          <category.icon className="w-5 h-5 sm:w-6 sm:h-6 text-orange-500" />
                           {category.category}
                         </h3>
                       </div>
                     </div>
 
-                    <div className="p-6 space-y-4">
+                    {/* Padding reducido en mobile */}
+                    <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                       {category.items.map((item, itemIndex) => (
                         <div
                           key={itemIndex}
-                          className="group/item flex justify-between items-start py-3 border-b border-white/10 last:border-0"
+                          className="group/item flex justify-between items-start py-2 sm:py-3 border-b border-white/10 last:border-0"
                         >
                           <div className="flex-1">
-                            <h4 className="font-bold text-lg group-hover/item:text-orange-500 transition-colors">
+                            <h4 className="font-bold text-base sm:text-lg group-hover/item:text-orange-500 transition-colors">
                               {item.name}
                             </h4>
-                            <p className="text-sm text-gray-400">{item.description}</p>
+                            <p className="text-xs sm:text-sm text-gray-400">{item.description}</p>
                           </div>
                         </div>
                       ))}
@@ -616,19 +619,25 @@ export default function Home() {
               </div>
             </SectionReveal>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {galleryImages.map((image, i) => (
                 <SectionReveal key={i} delay={i * 100}>
-                  <div className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer">
+                  <div className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-md active:scale-95 transition-transform duration-150">
                     <Image
                       src={image.src}
                       alt={image.alt}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <p className="text-white font-bold">{image.alt}</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    {/* Ícono de expandir — siempre visible en mobile */}
+                    <div className="absolute top-2 right-2 w-7 h-7 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center sm:opacity-0 group-hover:opacity-100 transition-opacity">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                      </svg>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <p className="text-white font-bold text-sm">{image.alt}</p>
                     </div>
                   </div>
                 </SectionReveal>
@@ -729,13 +738,18 @@ export default function Home() {
                     aria-label={`Abrir ubicación de ${branch.name} en Google Maps`}
                     className="block h-full"
                   >
-                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:border-primary transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:border-primary transition-all duration-300 hover:-translate-y-2 active:scale-95 h-full flex flex-col">
                       <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary">
                         <MapPin className="w-6 h-6" />
                       </div>
                       <h3 className="font-bold text-xl text-text-main mb-2">{branch.name}</h3>
                       <p className="text-text-muted flex-grow">{branch.address}</p>
                       <p className="text-text-muted mt-1 font-medium text-sm border-t border-gray-100 pt-3">{branch.city}</p>
+                      {/* CTA Maps visual */}
+                      <div className="mt-4 flex items-center gap-2 text-primary font-semibold text-sm">
+                        <MapPin className="w-4 h-4 animate-bounce" />
+                        <span>Ver en Google Maps →</span>
+                      </div>
                     </div>
                   </Link>
                 </SectionReveal>
@@ -769,7 +783,7 @@ export default function Home() {
                     </p>
                   </div>
                   <Link
-                    href="https://linktr.ee/metropizzacol?utm_source=linktree_profile_share&ltsid=28985606-398f-41eb-aae1-6ff7192ca4b8"
+                    href="https://linktr.ee/MetroPizzaGyP"
                     target="_blank"
                     className="btn bg-white text-text-main hover:bg-gray-100 whitespace-nowrap px-10 py-4 shadow-xl flex gap-2 items-center"
                   >
@@ -863,6 +877,22 @@ export default function Home() {
             </div>
           </div>
         </footer>
+        {/* WhatsApp FAB — Solo mobile/tablet, siempre visible al scrollear */}
+        <a
+          href="https://linktr.ee/MetroPizzaGyP"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pedir por WhatsApp"
+          className="md:hidden fixed bottom-6 right-5 z-50 whatsapp-fab whatsapp-fab-ring"
+        >
+          <div className="relative flex items-center gap-2 bg-[#25D366] text-white px-4 py-3.5 rounded-full shadow-[0_8px_30px_rgba(37,211,102,0.45)] active:scale-95 transition-transform duration-150">
+            {/* WhatsApp SVG icon */}
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span className="font-bold text-sm whitespace-nowrap">¡Pide Ahora!</span>
+          </div>
+        </a>
       </main>
 
       {/* Enhanced Structured Data for SEO */}

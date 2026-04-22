@@ -197,21 +197,23 @@ export default function TestimonialCarousel() {
       </button>
 
       {/* Modern Indicators */}
-      <div className="flex justify-center gap-3 mt-12">
+      <div className="flex justify-center gap-1 mt-12">
         {testimonials.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => {
-              setStartIndex(i);
-              setProgress(0);
-            }}
-            className={`transition-all duration-500 ease-out ${
-              startIndex === i 
-                ? 'w-12 h-2 bg-primary rounded-full shadow-[0_0_15px_rgba(227,27,34,0.4)]' 
-                : 'w-2 h-2 bg-gray-200 rounded-full hover:bg-gray-300 scale-90 hover:scale-100'
-            }`}
-            aria-label={`Ir a testimonio ${i + 1}`}
-          />
+          /* Área táctil mínima 44px — Apple HIG / WCAG 2.5.5 */
+          <div key={i} className="flex items-center justify-center w-11 h-11">
+            <button
+              onClick={() => {
+                setStartIndex(i);
+                setProgress(0);
+              }}
+              className={`transition-all duration-500 ease-out ${
+                startIndex === i 
+                  ? 'w-8 h-3 bg-primary rounded-full shadow-[0_0_15px_rgba(227,27,34,0.4)]' 
+                  : 'w-3 h-3 bg-gray-300 rounded-full hover:bg-gray-400 hover:scale-110'
+              }`}
+              aria-label={`Ir a testimonio ${i + 1}`}
+            />
+          </div>
         ))}
       </div>
     </div>

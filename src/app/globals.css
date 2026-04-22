@@ -190,6 +190,28 @@
 
   .icon-spin:hover   { animation: spin   0.5s ease-in-out; }
   .icon-bounce:hover { animation: bounce 0.5s ease-in-out; }
+
+  /* ---- Accesibilidad táctil ---- */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* ---- WhatsApp FAB ---- */
+  .whatsapp-fab {
+    animation: slide-up-fab 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: 1.2s;
+  }
+
+  .whatsapp-fab-ring {
+    animation: ring-pulse 2.5s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  /* ---- Press feedback táctil ---- */
+  .press-scale {
+    @apply transition-transform duration-150 active:scale-95;
+  }
 }
 
 @keyframes float {
@@ -216,6 +238,17 @@
 @keyframes bounce {
   0%, 100% { transform: translateY(0);    }
   50%       { transform: translateY(-5px); }
+}
+
+@keyframes slide-up-fab {
+  from { transform: translateY(100px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+@keyframes ring-pulse {
+  0%   { box-shadow: 0 0 0 0   rgba(37,211,102,0.55); }
+  50%  { box-shadow: 0 0 0 14px rgba(37,211,102,0);   }
+  100% { box-shadow: 0 0 0 0   rgba(37,211,102,0);    }
 }
 
 /* Scrollbar Rojo → Naranja */
