@@ -242,27 +242,27 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <SectionReveal direction="left">
                 <div className="relative">
-                  {/* Mobile: scroll horizontal snap | Desktop: grid 2 columnas */}
-                  <div className="flex sm:grid sm:grid-cols-2 gap-4 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0 snap-x snap-mandatory scroll-smooth">
-                    <div className="flex sm:flex flex-col gap-4 min-w-[72vw] sm:min-w-0 snap-start">
-                      <div className="relative h-52 sm:h-64 rounded-2xl overflow-hidden shadow-xl group flex-shrink-0">
+                  {/* Grid de imágenes con diferentes alturas para efecto masonry en todos los dispositivos */}
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div className="flex flex-col gap-3 sm:gap-4">
+                      <div className="relative h-32 sm:h-64 rounded-2xl overflow-hidden shadow-xl group">
                         <Image
                           src="/images/pizza.png"
                           alt="Pizza gigante por metro recién horneada en Los Patios Norte de Santander"
                           fill
-                          sizes="(max-width: 768px) 70vw, 25vw"
+                          sizes="(max-width: 768px) 50vw, 25vw"
                           loading="lazy"
                           decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-orange-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
-                      <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden shadow-xl group flex-shrink-0">
+                      <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden shadow-xl group">
                         <Image
                           src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=2070&auto=format&fit=crop"
                           alt="Ingredientes frescos para pizzas italianas en Cúcuta"
                           fill
-                          sizes="(max-width: 768px) 70vw, 25vw"
+                          sizes="(max-width: 768px) 50vw, 25vw"
                           loading="lazy"
                           decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -271,25 +271,25 @@ export default function Home() {
                         <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
                     </div>
-                    <div className="flex sm:flex flex-col gap-4 sm:pt-8 min-w-[72vw] sm:min-w-0 snap-start">
-                      <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden shadow-xl group flex-shrink-0">
+                    <div className="flex flex-col gap-3 sm:gap-4 pt-6 sm:pt-8">
+                      <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden shadow-xl group">
                         <Image
                           src="/images/pasta.png"
                           alt="Pasta fresca artesanal a domicilio en Los Patios"
                           fill
-                          sizes="(max-width: 768px) 70vw, 25vw"
+                          sizes="(max-width: 768px) 50vw, 25vw"
                           loading="lazy"
                           decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
-                      <div className="relative h-52 sm:h-64 rounded-2xl overflow-hidden shadow-xl group flex-shrink-0">
+                      <div className="relative h-32 sm:h-64 rounded-2xl overflow-hidden shadow-xl group">
                         <Image
                           src="/images/lasagna.png"
                           alt="Auténtica lasaña italiana a domicilio en Cúcuta"
                           fill
-                          sizes="(max-width: 768px) 70vw, 25vw"
+                          sizes="(max-width: 768px) 50vw, 25vw"
                           loading="lazy"
                           decoding="async"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
