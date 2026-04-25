@@ -166,7 +166,7 @@ export default function Navbar() {
           aria-label="Menú de navegación"
           className={cn(
             'md:hidden absolute top-full left-0 w-full bg-white/98 backdrop-blur-2xl shadow-2xl border-b border-gray-100',
-            'transition-[max-height,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] overflow-hidden',
+            'transition-[max-height,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] overflow-hidden overscroll-contain',
             mobileMenuOpen ? 'max-h-[480px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
           )}
         >

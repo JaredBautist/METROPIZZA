@@ -186,7 +186,11 @@ export default function Home() {
                 Metro <span className="text-accent">Pizza</span>
               </h1>
               <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl text-accent italic mb-8 drop-shadow-lg">
-                ¡El sabor a tu medida!
+                <span className="inline-block opacity-0 animate-[fadeInUp_0.6s_ease-out_0.2s_forwards]">¡El</span>{' '}
+                <span className="inline-block opacity-0 animate-[fadeInUp_0.6s_ease-out_0.35s_forwards]">sabor</span>{' '}
+                <span className="inline-block opacity-0 animate-[fadeInUp_0.6s_ease-out_0.5s_forwards]">a</span>{' '}
+                <span className="inline-block opacity-0 animate-[fadeInUp_0.6s_ease-out_0.65s_forwards]">tu</span>{' '}
+                <span className="inline-block opacity-0 animate-[fadeInUp_0.6s_ease-out_0.8s_forwards]">medida!</span>
               </h2>
             </SectionReveal>
 
@@ -198,7 +202,7 @@ export default function Home() {
 
             <SectionReveal delay={300}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link href="#menu" className="btn btn-primary text-lg px-10 py-4 touch-target w-full sm:w-auto">
+                <Link href="#menu" className="btn btn-primary text-lg px-10 py-4 touch-target w-full sm:w-auto shadow-lg shadow-primary/50">
                   <UtensilsCrossed className="w-5 h-5 mr-2" />
                   Nuestros Favoritos
                 </Link>
@@ -828,7 +832,7 @@ export default function Home() {
                       <li key={link}>
                         <Link
                           href={`#${link.toLowerCase()}`}
-                          className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group"
+                          className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group py-2"
                         >
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                           {link}
@@ -1167,7 +1171,7 @@ function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
     <Link
       href={href}
       target="_blank"
-      className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-orange-500 hover:scale-110 transition-all duration-300"
+      className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-orange-500 hover:scale-110 transition-all duration-300"
     >
       {icon}
     </Link>
