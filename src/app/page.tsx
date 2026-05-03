@@ -28,6 +28,8 @@ import {
   ChefHat,
   Flag,
   Fish,
+  Users,
+  Store,
 } from "lucide-react";
 
 const locationMenus = [
@@ -434,41 +436,127 @@ export default function Home() {
               </div>
             </SectionReveal>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  year: "2014",
-                  title: "El Inicio",
-                  description: "Llegamos a Los Patios con la mision de traer la verdadera pizza italiana para ti.",
-                },
-                {
-                  year: "2018",
-                  title: "Receta Original",
-                  description: "Nos mantenemos fieles a nuestras raíces: masa delgada, tomate San Marzano y mucho amor.",
-                },
-                {
-                  year: "2024",
-                  title: "Tradicion Consolidada",
-                  description: "Mas de 600 resenas nos respaldan como el verdadero referente de cocina italiana en la region.",
-                },
-              ].map((item, i) => (
-                <SectionReveal key={i} delay={i * 150}>
-                  <div className="relative group">
-                    <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                      <div className="text-5xl font-heading font-bold bg-gradient-to-r from-orange-500 via-primary to-primary bg-clip-text text-transparent mb-4">
-                        {item.year}
+            <div className="max-w-4xl mx-auto mt-12">
+              <div className="relative">
+                {/* Timeline line (vertical) */}
+                <div className="absolute left-[26px] md:left-1/2 top-8 bottom-0 w-1 bg-gradient-to-b from-orange-500 via-primary to-transparent md:-translate-x-1/2 rounded-full opacity-30" />
+                
+                <div className="space-y-8 md:space-y-16 pb-8">
+                {[
+                  {
+                    year: "2014",
+                    title: "El Sueño",
+                    icon: Sparkles,
+                    description: "Todo comenzó con un amor por la pizza desde los 12 años. Tras cinco intentos fallidos, la perseverancia rindió frutos. En 2014, con el apoyo incondicional de mi esposa e hijos, logramos hacer realidad el sueño de toda una vida en una esquina de Los Patios. Así nació la familia MetroPizza.",
+                    images: [
+                      "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop"
+                    ]
+                  },
+                  {
+                    year: "2019",
+                    title: "Expansión a Pinar del Río",
+                    icon: Store,
+                    description: "[Espacio reservado: Aquí contaremos cómo MetroPizza dio su gran paso abriendo la hermosa sede en Pinar del Río. ¡Historia pendiente de Don Nelson!]",
+                    images: [
+                      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?q=80&w=800&auto=format&fit=crop"
+                    ]
+                  },
+                  {
+                    year: "2020",
+                    title: "La Prueba de Fuego",
+                    icon: Flame,
+                    description: "Un incendio justo al abrir la sede Pinar del Río, seguido de la pandemia. Fue nuestro momento más oscuro, pero gracias a la lealtad de la clientela, salimos adelante.",
+                    images: [
+                      "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=800&auto=format&fit=crop"
+                    ]
+                  },
+                  {
+                    year: "Hoy",
+                    title: "Una Gran Familia",
+                    icon: Users,
+                    description: "Ya llevamos 12 años en el mercado. Hoy somos una empresa de la cual dependen 22 familias e impulsamos emprendimientos locales como 'El Artesano'.",
+                    images: [
+                      "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800&auto=format&fit=crop"
+                    ]
+                  },
+                ].map((item, i) => (
+                  <SectionReveal key={i} delay={i * 100}>
+                    <div className={`relative flex items-center justify-between flex-col md:flex-row gap-4 md:gap-0 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                      
+                      {/* Timeline Dot with Icon */}
+                      <div className="absolute left-0 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-white border-4 border-primary shadow-[0_0_15px_rgba(227,27,34,0.3)] text-primary">
+                        <item.icon className="w-6 h-6" />
                       </div>
-                      <h3 className="font-heading text-2xl font-bold text-text-main mb-3">
-                        {item.title}
-                      </h3>
-                      <p className="text-text-muted">{item.description}</p>
+
+                      {/* Spacer for empty side (Desktop) */}
+                      <div className="hidden md:block w-5/12" />
+
+                      {/* Card Content */}
+                      <div className="w-full md:w-5/12 pl-20 md:pl-0 press-scale">
+                        <div className="bg-white/80 backdrop-blur-md border border-white/50 p-6 sm:p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden">
+                          {/* Decorative blur inside card */}
+                          <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+                          
+                          <div className="text-4xl md:text-5xl font-heading font-bold bg-gradient-to-br from-orange-500 to-primary bg-clip-text text-transparent mb-2 inline-block">
+                            {item.year}
+                          </div>
+
+                          {/* @ts-ignore */}
+                          {item.images && item.images.length > 0 && (
+                            <div className="grid grid-cols-2 gap-2 mt-2 mb-4">
+                              <div className="col-span-2 overflow-hidden rounded-2xl shadow-sm h-40 sm:h-48 relative">
+                                {/* @ts-ignore */}
+                                <img src={item.images[0]} alt={`${item.title} 1`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                              </div>
+                              <div className="col-span-1 overflow-hidden rounded-xl shadow-sm h-24 sm:h-28 relative">
+                                {/* @ts-ignore */}
+                                <img src={item.images[1]} alt={`${item.title} 2`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                              </div>
+                              <div className="col-span-1 overflow-hidden rounded-xl shadow-sm h-24 sm:h-28 relative">
+                                {/* @ts-ignore */}
+                                <img src={item.images[2]} alt={`${item.title} 3`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                              </div>
+                            </div>
+                          )}
+
+                          <h3 className="font-heading text-2xl font-bold text-text-main mb-3">
+                            {item.title}
+                          </h3>
+                          <p className="text-text-muted text-base sm:text-lg leading-relaxed text-pretty">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+
                     </div>
-                    {i < 2 && (
-                      <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-orange-500 to-primary" />
-                    )}
+                  </SectionReveal>
+                ))}
+                </div>
+              </div>
+
+              {/* Mensaje Final de Don Nelson */}
+              <SectionReveal delay={500}>
+                <div className="mt-12 md:mt-20 max-w-3xl mx-auto text-center px-4 bg-white/60 backdrop-blur-md rounded-3xl p-8 sm:p-12 border border-white/60 shadow-xl relative z-10">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6 shadow-lg shadow-primary/20">
+                    <Heart className="w-8 h-8" />
                   </div>
-                </SectionReveal>
-              ))}
+                  <h3 className="font-heading text-3xl md:text-4xl font-bold text-text-main mb-6">
+                    Gratitud Infinita
+                  </h3>
+                  <p className="font-heading text-2xl md:text-3xl text-gray-800 italic leading-relaxed text-balance drop-shadow-sm">
+                    "A nuestra clientela tan leal y a nuestro equipo: todos somos la familia MetroPizza. Gracias por creer en estos soñadores. La clave es nunca dejar de creer y ser perseverante, porque sí se puede."
+                  </p>
+                  <p className="mt-8 font-bold text-lg text-primary">— Don Nelson Silva</p>
+                </div>
+              </SectionReveal>
             </div>
           </div>
         </section>
