@@ -852,6 +852,61 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FAQ Section - Visible HTML para Rich Snippets en Google */}
+        <section id="preguntas" className="section-padding bg-white/80 backdrop-blur-sm relative border-t border-gray-100">
+          <div className="section-container">
+            <SectionReveal>
+              <div className="text-center mb-12">
+                <Badge variant="secondary" icon={<UtensilsCrossed className="w-4 h-4" />}>
+                  Preguntas Frecuentes
+                </Badge>
+                <h2 className="font-heading text-3xl md:text-4xl text-text-main mt-6">
+                  ¿Tienes dudas sobre <span className="text-primary">MetroPizza</span>?
+                </h2>
+              </div>
+            </SectionReveal>
+
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                {
+                  q: "¿Dónde está ubicado MetroPizza en Los Patios?",
+                  a: "Nuestra sede Gourmet está en la Calle 16 #9-45, Los Patios, Norte de Santander. Puedes vernos en Google Maps o llamarnos al +57 310 888 4489."
+                },
+                {
+                  q: "¿Dónde está la pizzería MetroPizza en Cúcuta?",
+                  a: "Nuestra sede Premium está en el Barrio Bellavista, Pinar del Río, Cúcuta. Puedes pedir a domicilio al +57 313 550 1695."
+                },
+                {
+                  q: "¿MetroPizza hace domicilios de pizza a Los Patios y Cúcuta?",
+                  a: "¡Sí! Hacemos domicilios en Los Patios, Pinar del Río y zonas cercanas de Cúcuta. Puedes pedir por WhatsApp o llamarnos directamente a cualquiera de nuestras sedes."
+                },
+                {
+                  q: "¿Qué es la pizza por metro de MetroPizza?",
+                  a: "La pizza por metro es nuestra especialidad: una pizza extra grande, perfecta para grupos, fiestas y eventos. Puedes elegir distintos sabores en una misma pizza. ¡Es el favorito de Cúcuta y Los Patios!"
+                },
+                {
+                  q: "¿Cuál es el horario de MetroPizza?",
+                  a: "Abrimos todos los días a partir de las 5:00 p.m. Los fines de semana podemos extender el horario. ¡Llámanos para confirmar!"
+                },
+                {
+                  q: "¿Cómo pido pizza cerca de mí en Los Patios o Cúcuta?",
+                  a: "Puedes pedir fácilmente haciendo clic en el botón 'Pedir Ahora' en nuestra página, o buscándonos en Google como 'MetroPizza Los Patios' o 'pizza cerca de mí en Cúcuta'."
+                },
+              ].map((faq, i) => (
+                <SectionReveal key={i} delay={i * 80}>
+                  <details className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:border-primary/30 transition-colors duration-300">
+                    <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none font-bold text-text-main text-base md:text-lg group-open:text-primary transition-colors">
+                      <span>{faq.q}</span>
+                      <ChevronDown className="w-5 h-5 shrink-0 text-text-muted group-open:rotate-180 transition-transform duration-300" />
+                    </summary>
+                    <p className="px-5 pb-5 text-text-muted leading-relaxed">{faq.a}</p>
+                  </details>
+                </SectionReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer id="contacto" className="bg-bg-dark text-white relative">
           {/* Premium divider */}
@@ -1043,8 +1098,8 @@ export default function Home() {
                 "@type": "WebSite",
                 "@id": "https://metropizzacol.com/#website",
                 url: "https://metropizzacol.com",
-                name: "MetroPizza - Domicilios de Pizza en Cúcuta y Patios",
-                description: "Pide la mejor pizza por metro en Cúcuta. Auténtica pizza 100% italiana y artesanal recomendada. Promociones de pizza hoy.",
+                name: "MetroPizza - Domicilios de Pizza en Cúcuta y Los Patios",
+                description: "Pide la mejor pizza por metro en Cúcuta y Los Patios. Auténtica pizza 100% italiana y artesanal recomendada. Promociones de pizza hoy en Pinar del Río.",
                 publisher: {
                   "@id": "https://metropizzacol.com/#restaurant",
                 },
@@ -1052,23 +1107,23 @@ export default function Home() {
                   "@type": "SearchAction",
                   target: {
                     "@type": "EntryPoint",
-                    urlTemplate: "https://metropizza.com/?s={search_term_string}",
+                    urlTemplate: "https://metropizzacol.com/?s={search_term_string}",
                   },
                   "query-input": "required name=search_term_string",
                 },
               },
               {
                 "@type": "WebPage",
-                "@id": "https://metropizza.com/#webpage",
-                url: "https://metropizza.com",
-                name: "MetroPizza Los Patios | Autentica Pizza Italiana",
+                "@id": "https://metropizzacol.com/#webpage",
+                url: "https://metropizzacol.com",
+                name: "MetroPizza Los Patios | Autentica Pizza Italiana en Cúcuta",
                 isPartOf: {
-                  "@id": "https://metropizza.com/#website",
+                  "@id": "https://metropizzacol.com/#website",
                 },
                 about: {
-                  "@id": "https://metropizza.com/#restaurant",
+                  "@id": "https://metropizzacol.com/#restaurant",
                 },
-                description: "Descubre la mejor pizza en Cúcuta y Los Patios. Pizza por metro artesanal, pizza gigante para fiestas, promociones y domicilios.",
+                description: "Descubre la mejor pizza en Cúcuta y Los Patios. Pizza por metro artesanal, pizza gigante para fiestas, promociones y domicilios a domicilio.",
                 inLanguage: "es-CO",
               },
               {
@@ -1102,6 +1157,46 @@ export default function Home() {
               }
             ],
           }),
+        }}
+      />
+
+      {/* LocalBusiness Schema - Segunda sede Pinar del Río */}
+      <Script
+        id="metropizza-pinar-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "PizzaRestaurant",
+            "name": "MetroPizza Pinar del Río",
+            "alternateName": ["Metro Pizza Pinar", "MetroPizza Cúcuta", "Pizzería Pinar del Río"],
+            "image": "https://metropizzacol.com/logo.jpg",
+            "@id": "https://metropizzacol.com/#pinar",
+            "url": "https://metropizzacol.com",
+            "telephone": "+573135501695",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Barrio Bellavista",
+              "addressLocality": "Cúcuta",
+              "addressRegion": "Norte de Santander",
+              "addressCountry": "CO"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 7.8888,
+              "longitude": -72.5042
+            },
+            "openingHoursSpecification": [{
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+              "opens": "17:00",
+              "closes": "22:00"
+            }],
+            "servesCuisine": ["Italian", "Pizza", "Pasta"],
+            "keywords": "pizza pinar del rio, pizza cucuta, pizza cerca de mi, pizzeria pinar del rio, domicilios pizza cucuta",
+            "hasMap": "https://maps.app.goo.gl/taQKGG7XHC1PyM3N8"
+          })
         }}
       />
 
