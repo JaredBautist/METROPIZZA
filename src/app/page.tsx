@@ -59,9 +59,11 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "PizzaRestaurant",
           "name": "MetroPizza - La Mejor Pizza en Cúcuta y Los Patios",
+          "alternateName": ["Metro Pizza", "Metro Pizza Cúcuta", "Metro Pizza Los Patios", "Metro Pizza Pinar del Río"],
           "image": "https://metropizzacol.com/logo.jpg",
           "@id": "https://metropizzacol.com",
           "url": "https://metropizzacol.com",
+          "keywords": "pizza los patios, la mejor pizza de los patios, pizza cucuta, pizza pinar del rio, pizza cerca de mi, metro pizza, pizzeria cucuta",
           "telephone": "+573108884489",
           "priceRange": "$$",
           "address": {

@@ -24,11 +24,16 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: 'La Mejor Pizza en Cúcuta y Los Patios | Domicilios | MetroPizza',
+  title: 'MetroPizza | La Mejor Pizza en Cúcuta, Los Patios y Pinar del Río',
   description:
-    'Pide la mejor pizza en Cúcuta y pizza Los Patios domicilios. Disfruta nuestra famosa pizza por metro, pizza gigante para fiestas y pizza artesanal. ¡Pizzerías en Cúcuta abiertas ya!',
+    '¿Buscas pizza cerca de ti? Pide en MetroPizza la mejor pizza de Los Patios, Cúcuta y Pinar del Río. Pizza por metro, artesanal y domicilios. ¡Abiertos ya!',
   keywords: [
     'la mejor pizza en cucuta',
+    'pizza los patios',
+    'la mejor pizza de los patios',
+    'pizza cucuta',
+    'pizza pinar del rio',
+    'pizza cerca de mi',
     'pizza los patios domicilios',
     'pizzerias en cucuta abiertas ya',
     'pizza por metro cucuta',
@@ -36,7 +41,11 @@ export const metadata: Metadata = {
     'pizza artesanal cucuta',
     'promociones de pizza hoy cucuta',
     'pizzeria los patios',
+    'pizzeria pinar del rio',
     'domicilios de pizza cucuta',
+    'pizza a domicilio los patios',
+    'metro pizza cucuta',
+    'metropizza'
   ],
   authors: [{ name: 'MetroPizza' }],
   creator: 'MetroPizza Colombia',
@@ -53,9 +62,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'MetroPizza | La Mejor Pizza en Cúcuta y Los Patios',
+    title: 'MetroPizza | La Mejor Pizza en Cúcuta, Los Patios y Pinar del Río',
     description:
-      'Auténtica pizza por metro en Cúcuta y Los Patios. Pide tu pizza artesanal a domicilio, ideal para tamaño familiar y comuniones. ¡Abiertos ya!',
+      '¿Buscas pizza cerca de ti? Auténtica pizza por metro en Cúcuta, Los Patios y Pinar del Río. Pide tu pizza artesanal a domicilio. ¡Abiertos ya!',
     type: 'website',
     locale: 'es_CO',
     siteName: 'MetroPizza Colombia',
@@ -65,14 +74,14 @@ export const metadata: Metadata = {
         url: 'https://images.unsplash.com/photo-1552832230-c0197dd311f5?q=80&w=1996&auto=format&fit=crop',
         width: 1200,
         height: 630,
-        alt: 'MetroPizza - Pizza Italiana en Los Patios y Cúcuta',
+        alt: 'MetroPizza - Pizza Italiana en Los Patios, Cúcuta y Pinar del Río',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'MetroPizza | La Mejor Pizza a Domicilio en Cúcuta y Los Patios',
-    description: 'Pizza por metro, pizza gigante para fiestas y pizza artesanal. ¡Domícilios en Cúcuta y Los Patios abiertos ya!',
+    description: '¿Buscas pizza cerca de ti? Pizza por metro y artesanal. ¡Domícilios en Cúcuta, Los Patios y Pinar del Río abiertos ya!',
     images: ['https://images.unsplash.com/photo-1552832230-c0197dd311f5?q=80&w=1996&auto=format&fit=crop'],
   },
   alternates: {
