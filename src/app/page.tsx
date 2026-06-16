@@ -130,19 +130,23 @@ export default function Home() {
           {/* Background with Italian vibes */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=2069&auto=format&fit=crop"
-              alt="Pizza artesanal italiana horó en Los Patios Cúcuta Norte de Santander"
+              src="/images/image.png"
+              alt="Pizza artesanal de MetroPizza con camarones, pimentones y olivas - La mejor pizza en Los Patios Cúcuta"
               fill
               priority
               fetchPriority="high"
-              className="object-cover"
-              unoptimized
+              className="object-cover object-[center_65%]"
+              sizes="100vw"
+              quality={90}
             />
-            {/* Overlay gradient - Natural Food Contrast */}
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="absolute inset-0 bg-gradient-to-t from-bg-dark via-bg-dark/20 to-transparent" />
-            {/* Animated gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 animate-gradient" />
+            {/* Overlay base suave — 25% para que la pizza se vea y resalte */}
+            <div className="absolute inset-0 bg-black/25" />
+            {/* Gradiente inferior solo al fondo para fundir con la siguiente sección */}
+            <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/90 via-bg-dark/10 to-transparent" />
+            {/* Vignette lateral muy sutil */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/15 via-transparent to-black/15" />
+            {/* Animated brand color overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 animate-gradient" />
           </div>
           {/* Floating decorative particles */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">

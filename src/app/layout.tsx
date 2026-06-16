@@ -132,7 +132,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=2069&auto=format&fit=crop"
+          href="/images/image.png"
           fetchPriority="high"
         />
         <meta name="geo.region" content="CO-NST" />
