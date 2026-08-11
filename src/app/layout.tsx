@@ -24,9 +24,9 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: 'MetroPizza | Best Pizza in Cúcuta & Los Patios | La Mejor Pizza',
+  title: 'MetroPizza 🍕 La Mejor Pizza · Los Patios & Cúcuta',
   description:
-    'Best pizza in Cúcuta & Los Patios open now · La mejor pizza de Los Patios, Cúcuta y Pinar del Río. Pizza por metro, artesanal y domicilios. ¡Abiertos ya! · Best pizza near me delivery.',
+    '⭐ 4.6 · +10.000 clientes · La mejor pizza de Los Patios, Cúcuta y Pinar del Río. Pizza por metro, artesanal y a domicilio. Best pizza near me open now. ¡Pedí ya!',
   keywords: [
     // Español — búsquedas locales
     'la mejor pizza en cucuta',
@@ -74,9 +74,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'MetroPizza | Best Pizza in Cúcuta & Los Patios | Open Now 🍕',
+    title: 'MetroPizza 🍕 La Mejor Pizza · Los Patios & Cúcuta',
     description:
-      'Best pizza near me in Cúcuta & Los Patios — open now! Auténtica pizza por metro, artesanal y a domicilio. ¡La mejor pizza de Los Patios y Pinar del Río!',
+      '⭐ 4.6 · +10.000 clientes felices · Pizza por metro, artesanal y a domicilio en Los Patios, Cúcuta y Pinar del Río. Best pizza near me open now. ¡Pedí ya!',
     type: 'website',
     locale: 'es_CO',
     siteName: 'MetroPizza Colombia',
@@ -92,8 +92,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MetroPizza | Best Pizza Cúcuta & Los Patios | Open Now 🍕',
-    description: 'Best pizza near me open now in Cúcuta & Los Patios. Pizza por metro, artesanal y domicilios. ¡La mejor pizza de Pinar del Río!',
+    title: 'MetroPizza 🍕 La Mejor Pizza · Los Patios & Cúcuta',
+    description: '⭐ 4.6 · Pizza por metro, artesanal y domicilios en Los Patios, Cúcuta y Pinar del Río. Best pizza near me open now. ¡Pedí ya!',
     images: ['https://images.unsplash.com/photo-1552832230-c0197dd311f5?q=80&w=1996&auto=format&fit=crop'],
   },
   alternates: {

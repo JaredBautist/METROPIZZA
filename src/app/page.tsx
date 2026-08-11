@@ -1136,26 +1136,50 @@ export default function Home() {
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "¿Donde esta ubicado MetroPizza?",
+                    name: "¿Dónde está ubicado MetroPizza?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "MetroPizza cuenta con dos sedes principales: Patios (Gourmet) en la Calle 16 #9-45 y Pinar del Río (Premium) en Barrio Bellavista. Servimos con pasion la autentica tradicion italiana."
+                      text: "MetroPizza tiene dos sedes en Norte de Santander: Sede Gourmet en Los Patios (Calle 16 #9-45) y Sede Premium en Pinar del Río (Barrio Bellavista, Cúcuta). Ambas hacen domicilios."
                     }
                   },
                   {
                     "@type": "Question",
-                    name: "¿Que tipo de cocina ofrece MetroPizza?",
+                    name: "¿MetroPizza hace domicilios?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Ofrecemos autentica cocina italiana tradicional."
+                      text: "Sí, MetroPizza tiene servicio de domicilios en Los Patios, Cúcuta y Pinar del Río. Podés pedir por WhatsApp al 310 8884489 (Los Patios) o al 313 5501695 (Pinar del Río). También podés consumir en el lugar o pedir para llevar."
                     }
                   },
                   {
                     "@type": "Question",
-                    name: "¿Cual es el horario de atencion?",
+                    name: "¿Cuál es el horario de MetroPizza?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Abrimos todos los dias a las 5:00 PM. Los fines de semana extendemos el horario segun la demanda."
+                      text: "MetroPizza abre todos los días desde las 5:00 PM hasta las 10:00 PM aproximadamente. Los fines de semana puede extenderse según la demanda. Ambas sedes están abiertas."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    name: "¿Qué tiene el menú de MetroPizza?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "El menú de MetroPizza incluye pizza por metro, pizza gigante para fiestas, pizza artesanal, lasaña casera, pastas frescas y crepes. Todos preparados con ingredientes frescos y recetas italianas auténticas. Ver menú completo en metropizzacol.com."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    name: "¿Cuánto cuesta una pizza en MetroPizza?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Los precios en MetroPizza van desde $20.000 hasta $40.000 COP dependiendo del tamaño y los ingredientes. Ofrecemos pizza personal, mediana, grande y pizza por metro. Aceptamos efectivo y tarjeta."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Where is the best pizza near me in Cúcuta?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "MetroPizza is the best pizza near you in Cúcuta and Los Patios, Norte de Santander. With 4.6 stars and over 600 Google reviews, we offer authentic Italian pizza, delivery available. Located at Calle 16 #9-45, Los Patios. Call +57 310 8884489."
                     }
                   }
                 ]
