@@ -58,12 +58,12 @@ export default function Home() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "PizzaRestaurant",
-          "name": "MetroPizza - La Mejor Pizza en Cúcuta y Los Patios",
-          "alternateName": ["Metro Pizza", "Metro Pizza Cúcuta", "Metro Pizza Los Patios", "Metro Pizza Pinar del Río"],
+          "name": "MetroPizza - Best Pizza in Cúcuta & Los Patios | La Mejor Pizza",
+          "alternateName": ["Metro Pizza", "Metro Pizza Cúcuta", "Metro Pizza Los Patios", "Metro Pizza Pinar del Río", "MetroPizza Col", "Best Pizza Cucuta"],
           "image": "https://metropizzacol.com/logo.jpg",
           "@id": "https://metropizzacol.com",
           "url": "https://metropizzacol.com",
-          "keywords": "pizza los patios, la mejor pizza de los patios, pizza cucuta, pizza pinar del rio, pizza cerca de mi, metro pizza, pizzeria cucuta",
+          "keywords": "best pizza nearby, best pizza near me open now, pizza los patios, la mejor pizza de los patios, pizza cucuta, pizza pinar del rio, pizza cerca de mi, metro pizza, pizzeria cucuta, best pizza cucuta, pizza delivery cucuta",
           "telephone": "+573108884489",
           "priceRange": "$$",
           "address": {
@@ -107,7 +107,7 @@ export default function Home() {
               "name": "Cúcuta"
             }
           ],
-          "hasMap": "https://www.google.com/maps?cid=YOUR_BUSINESS_CID"
+          "hasMap": "https://maps.app.goo.gl/nR7BYQUDbAo6ERg57"
         })}
       </Script>
       <main className="min-h-screen overflow-x-hidden relative">
@@ -446,105 +446,105 @@ export default function Home() {
               <div className="relative">
                 {/* Timeline line (vertical) */}
                 <div className="absolute left-[26px] md:left-1/2 top-8 bottom-0 w-1 bg-gradient-to-b from-orange-500 via-primary to-transparent md:-translate-x-1/2 rounded-full opacity-30" />
-                
+
                 <div className="space-y-8 md:space-y-16 pb-8">
-                {[
-                  {
-                    year: "2014",
-                    title: "El Sueño",
-                    icon: Sparkles,
-                    description: "Todo comenzó con un amor por la pizza desde los 12 años. Tras cinco intentos fallidos, la perseverancia rindió frutos. En 2014, con el apoyo incondicional de mi esposa e hijos, logramos hacer realidad el sueño de toda una vida en una esquina de Los Patios. Así nació la familia MetroPizza.",
-                    images: [
-                      "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop"
-                    ]
-                  },
-                  {
-                    year: "2019",
-                    title: "Expansión a Pinar del Río",
-                    icon: Store,
-                    description: "[Espacio reservado: Aquí contaremos cómo MetroPizza dio su gran paso abriendo la hermosa sede en Pinar del Río. ¡Historia pendiente de Don Nelson!]",
-                    images: [
-                      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?q=80&w=800&auto=format&fit=crop"
-                    ]
-                  },
-                  {
-                    year: "2020",
-                    title: "La Prueba de Fuego",
-                    icon: Flame,
-                    description: "Un incendio justo al abrir la sede Pinar del Río, seguido de la pandemia. Fue nuestro momento más oscuro, pero gracias a la lealtad de la clientela, salimos adelante.",
-                    images: [
-                      "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=800&auto=format&fit=crop"
-                    ]
-                  },
-                  {
-                    year: "Hoy",
-                    title: "Una Gran Familia",
-                    icon: Users,
-                    description: "Ya llevamos 12 años en el mercado. Hoy somos una empresa de la cual dependen 22 familias e impulsamos emprendimientos locales como 'El Artesano'.",
-                    images: [
-                      "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800&auto=format&fit=crop"
-                    ]
-                  },
-                ].map((item, i) => (
-                  <SectionReveal key={i} delay={i * 100}>
-                    <div className={`relative flex items-center justify-between flex-col md:flex-row gap-4 md:gap-0 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                      
-                      {/* Timeline Dot with Icon */}
-                      <div className="absolute left-0 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-white border-4 border-primary shadow-[0_0_15px_rgba(227,27,34,0.3)] text-primary">
-                        <item.icon className="w-6 h-6" />
-                      </div>
+                  {[
+                    {
+                      year: "2014",
+                      title: "El Sueño",
+                      icon: Sparkles,
+                      description: "Todo comenzó con un amor por la pizza desde los 12 años. Tras cinco intentos fallidos, la perseverancia rindió frutos. En 2014, con el apoyo incondicional de mi esposa e hijos, logramos hacer realidad el sueño de toda una vida en una esquina de Los Patios. Así nació la familia MetroPizza.",
+                      images: [
+                        "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop",
+                        "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=800&auto=format&fit=crop",
+                        "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop"
+                      ]
+                    },
+                    {
+                      year: "2019",
+                      title: "Expansión a Pinar del Río",
+                      icon: Store,
+                      description: "[Espacio reservado: Aquí contaremos cómo MetroPizza dio su gran paso abriendo la hermosa sede en Pinar del Río. ¡Historia pendiente de Don Nelson!]",
+                      images: [
+                        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop",
+                        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop",
+                        "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?q=80&w=800&auto=format&fit=crop"
+                      ]
+                    },
+                    {
+                      year: "2020",
+                      title: "La Prueba de Fuego",
+                      icon: Flame,
+                      description: "Un incendio justo al abrir la sede Pinar del Río, seguido de la pandemia. Fue nuestro momento más oscuro, pero gracias a la lealtad de la clientela, salimos adelante.",
+                      images: [
+                        "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?q=80&w=800&auto=format&fit=crop",
+                        "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop",
+                        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=800&auto=format&fit=crop"
+                      ]
+                    },
+                    {
+                      year: "Hoy",
+                      title: "Una Gran Familia",
+                      icon: Users,
+                      description: "Ya llevamos 12 años en el mercado. Hoy somos una empresa de la cual dependen 22 familias e impulsamos emprendimientos locales como 'El Artesano'.",
+                      images: [
+                        "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=800&auto=format&fit=crop",
+                        "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=800&auto=format&fit=crop",
+                        "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800&auto=format&fit=crop"
+                      ]
+                    },
+                  ].map((item, i) => (
+                    <SectionReveal key={i} delay={i * 100}>
+                      <div className={`relative flex items-center justify-between flex-col md:flex-row gap-4 md:gap-0 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
 
-                      {/* Spacer for empty side (Desktop) */}
-                      <div className="hidden md:block w-5/12" />
-
-                      {/* Card Content */}
-                      <div className="w-full md:w-5/12 pl-20 md:pl-0 press-scale">
-                        <div className="bg-white/80 backdrop-blur-md border border-white/50 p-6 sm:p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden">
-                          {/* Decorative blur inside card */}
-                          <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
-                          
-                          <div className="text-4xl md:text-5xl font-heading font-bold bg-gradient-to-br from-orange-500 to-primary bg-clip-text text-transparent mb-2 inline-block">
-                            {item.year}
-                          </div>
-
-                          {/* @ts-ignore */}
-                          {item.images && item.images.length > 0 && (
-                            <div className="grid grid-cols-2 gap-2 mt-2 mb-4">
-                              <div className="col-span-2 overflow-hidden rounded-2xl shadow-sm h-40 sm:h-48 relative">
-                                {/* @ts-ignore */}
-                                <img src={item.images[0]} alt={`${item.title} 1`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                              </div>
-                              <div className="col-span-1 overflow-hidden rounded-xl shadow-sm h-24 sm:h-28 relative">
-                                {/* @ts-ignore */}
-                                <img src={item.images[1]} alt={`${item.title} 2`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                              </div>
-                              <div className="col-span-1 overflow-hidden rounded-xl shadow-sm h-24 sm:h-28 relative">
-                                {/* @ts-ignore */}
-                                <img src={item.images[2]} alt={`${item.title} 3`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                              </div>
-                            </div>
-                          )}
-
-                          <h3 className="font-heading text-2xl font-bold text-text-main mb-3">
-                            {item.title}
-                          </h3>
-                          <p className="text-text-muted text-base sm:text-lg leading-relaxed text-pretty">
-                            {item.description}
-                          </p>
+                        {/* Timeline Dot with Icon */}
+                        <div className="absolute left-0 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-white border-4 border-primary shadow-[0_0_15px_rgba(227,27,34,0.3)] text-primary">
+                          <item.icon className="w-6 h-6" />
                         </div>
-                      </div>
 
-                    </div>
-                  </SectionReveal>
-                ))}
+                        {/* Spacer for empty side (Desktop) */}
+                        <div className="hidden md:block w-5/12" />
+
+                        {/* Card Content */}
+                        <div className="w-full md:w-5/12 pl-20 md:pl-0 press-scale">
+                          <div className="bg-white/80 backdrop-blur-md border border-white/50 p-6 sm:p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden">
+                            {/* Decorative blur inside card */}
+                            <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+
+                            <div className="text-4xl md:text-5xl font-heading font-bold bg-gradient-to-br from-orange-500 to-primary bg-clip-text text-transparent mb-2 inline-block">
+                              {item.year}
+                            </div>
+
+                            {/* @ts-ignore */}
+                            {item.images && item.images.length > 0 && (
+                              <div className="grid grid-cols-2 gap-2 mt-2 mb-4">
+                                <div className="col-span-2 overflow-hidden rounded-2xl shadow-sm h-40 sm:h-48 relative">
+                                  {/* @ts-ignore */}
+                                  <img src={item.images[0]} alt={`${item.title} 1`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <div className="col-span-1 overflow-hidden rounded-xl shadow-sm h-24 sm:h-28 relative">
+                                  {/* @ts-ignore */}
+                                  <img src={item.images[1]} alt={`${item.title} 2`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <div className="col-span-1 overflow-hidden rounded-xl shadow-sm h-24 sm:h-28 relative">
+                                  {/* @ts-ignore */}
+                                  <img src={item.images[2]} alt={`${item.title} 3`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                                </div>
+                              </div>
+                            )}
+
+                            <h3 className="font-heading text-2xl font-bold text-text-main mb-3">
+                              {item.title}
+                            </h3>
+                            <p className="text-text-muted text-base sm:text-lg leading-relaxed text-pretty">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
+                    </SectionReveal>
+                  ))}
                 </div>
               </div>
 
@@ -598,7 +598,7 @@ export default function Home() {
                 </h2>
 
                 <p className="text-gray-400 text-lg">
-                  Auténticas recetas italianas elaboradas con el corazón de nuestra región, 
+                  Auténticas recetas italianas elaboradas con el corazón de nuestra región,
                   usando ingredientes frescos y selectos obtenidos directamente de nuestros campos y mercados locales.
                 </p>
               </div>
@@ -1041,7 +1041,7 @@ export default function Home() {
           <div className="relative flex items-center gap-2 bg-[#25D366] text-white px-4 py-3.5 rounded-full shadow-[0_8px_30px_rgba(37,211,102,0.45)] active:scale-95 transition-transform duration-150">
             {/* WhatsApp SVG icon */}
             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
             </svg>
             <span className="font-bold text-sm whitespace-nowrap">¡Pide Ahora!</span>
           </div>
@@ -1059,16 +1059,17 @@ export default function Home() {
               {
                 "@type": "Restaurant",
                 "@id": "https://metropizzacol.com/#restaurant",
-                name: "MetroPizza - La Mejor Pizza en Cúcuta y Los Patios",
-                description: "La mejor pizza en Cúcuta y pizza en Los Patios domicilios. Especialistas en pizza por metro, pizza gigante para fiestas y pizza artesanal. ¡Pizzerías abiertas ya con promociones!",
+                name: "MetroPizza - Best Pizza in Cúcuta & Los Patios | La Mejor Pizza",
+                description: "Best pizza near me in Cúcuta & Los Patios open now. La mejor pizza en Cúcuta y pizza en Los Patios domicilios. Especialistas en pizza por metro, pizza gigante para fiestas y pizza artesanal.",
                 image: "https://images.unsplash.com/photo-1552832230-c0197dd311f5?q=80&w=1996&auto=format&fit=crop",
                 telephone: "+57 310 8884489",
                 email: "contacto@metropizza.com",
-                url: "https://metropizza.com",
+                url: "https://metropizzacol.com",
                 priceRange: "$$",
                 servesCuisine: ["Pizza", "Italian", "Pasta", "Lasagna", "Crepes"],
                 currenciesAccepted: "COP",
-                paymentAccepted: "Cash, Credit Card, Debit Card",
+                paymentAccepted: "Efectivo, Tarjeta de Crédito, Tarjeta Débito, Cash, Credit Card",
+                keywords: "best pizza nearby, best pizza near me open now, best pizza cucuta, pizza near me cucuta, pizza los patios, pizza cucuta, metro pizza cucuta, pizzeria cucuta domicilios",
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "Cl. 16 #9-45",
@@ -1193,7 +1194,7 @@ export default function Home() {
             },
             "openingHoursSpecification": [{
               "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
               "opens": "17:00",
               "closes": "22:00"
             }],
@@ -1326,7 +1327,7 @@ const menuData = [
   },
   {
     category: "Ceviches",
-    image: "https://static1.squarespace.com/static/64c58e1fde62886ac69f49d8/66269876b3bfaa7784e8c704/6696e4a16999703beb1329b3/1724683186096/receta-de-camarones-en-salsa-rosada-el-salvador-capitan-marisco-mariscos-frescos-a-domicilio.jpg?format=1500w", 
+    image: "https://static1.squarespace.com/static/64c58e1fde62886ac69f49d8/66269876b3bfaa7784e8c704/6696e4a16999703beb1329b3/1724683186096/receta-de-camarones-en-salsa-rosada-el-salvador-capitan-marisco-mariscos-frescos-a-domicilio.jpg?format=1500w",
     icon: Fish,
     items: [
       { name: "Cóctel de Camarones", description: "Camarones frescos con salsa cóctel de la casa" },
@@ -1343,13 +1344,13 @@ const galleryImages = [
   { src: "https://instagram.fbga2-1.fna.fbcdn.net/v/t51.82787-15/582002465_18096940039794197_2239727367230332515_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzc2NjUyNDA0NDg4MDQ2NTg0Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTkyMC5zZHIuQzMifQ%3D%3D&_nc_ohc=1R7JquCAijkQ7kNvwHq9hH1&_nc_oc=AdqLRLehQi-GJB6_Zj1koOp0gD2bakWD9AwxqhsFsUkQOiiQWO727Uup_8q5ljveEi96g0lrUpEd0cV4fmhVNj8e&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbga2-1.fna&_nc_gid=-pyyHtQqDmNpqJ9oFklMTQ&_nc_ss=7a32e&oh=00_AfxAnmZHxf6zEqR81zVWCjw1zyg_wp7Npyv59WYnssGNEQ&oe=69CE7CF0", alt: "MetroPizza 4" },
   { src: "https://instagram.fbga2-1.fna.fbcdn.net/v/t39.30808-6/468055315_18061953916794197_7476465813196411478_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzI0OTIxOTgwMTQyNjM2NDg1Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=nBNdtpqwehAQ7kNvwFcoOQ5&_nc_oc=Adr4enLt8-bZiIOmI3LGqFaSrP3QGWiWYV6FhJ9qbA5C59M1jXAoQSWjjLDXoOml8S8YwQxXt_XJlSjDZzpr_17N&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbga2-1.fna&_nc_gid=xzwvEocwcfsMQCouX0t78A&_nc_ss=7a32e&oh=00_AfwxYU9hdOmLHM1AytDBLkDCUTnQQyDSyjJSSdE0FlV5ow&oe=69CE5D02", alt: "MetroPizza 5" },
   { src: "https://instagram.fbga2-1.fna.fbcdn.net/v/t39.30808-6/402134750_18024779164794197_124564517541382461_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ig_cache_key=MzI0MDQ3NDI4MTQ2ODYxMzI2NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=QiBwuRueSvoQ7kNvwH4ip3w&_nc_oc=AdoDJcaQOOjv2Hq_gAtARbcT4bWQ3O1NhascKvqUtHRK22Ofy4EaZ2lVJZ014lKa-myuUQdbzUaPdRUyPnzmxtut&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbga2-1.fna&_nc_gid=LSWhlPsMfHtrqd0dKtn90g&_nc_ss=7a32e&oh=00_AfzL8hm--HbqELLAqRXqyt4DUflWYY4Pk8GNv5D8GQyURA&oe=69CE64E6", alt: "MetroPizza 6" },
-  { 
-    src: "https://instagram.fbog20-1.fna.fbcdn.net/v/t39.30808-6/396292797_18022298770794197_6781914378553959374_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzIyNjcxNzc1MDQwMzA2ODc1Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNDl4MTY4Ny5zZHIuQzMifQ%3D%3D&_nc_ohc=t_76cbSPIVMQ7kNvwE4pZrU&_nc_oc=AdpEy0vNv64MAuoMiQr2jcfA3IRvNStx0IwBxjZAnm-v0ypfeICQvkF1OcAgs9dXJog&_nc_ad=z-m&_nc_cid=1462&_nc_zt=23&_nc_ht=instagram.fbog20-1.fna&_nc_gid=rZNUXKF3aqAD5u6qtrz-ww&_nc_ss=7a32e&oh=00_Af0_KALA8ag3D93zexNR7X--VroU2M_5G6LtxRoyfL8Dxg&oe=69D381B3", 
-    alt: "Momento MetroPizza - Slice de Verdad" 
+  {
+    src: "https://instagram.fbog20-1.fna.fbcdn.net/v/t39.30808-6/396292797_18022298770794197_6781914378553959374_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzIyNjcxNzc1MDQwMzA2ODc1Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNDl4MTY4Ny5zZHIuQzMifQ%3D%3D&_nc_ohc=t_76cbSPIVMQ7kNvwE4pZrU&_nc_oc=AdpEy0vNv64MAuoMiQr2jcfA3IRvNStx0IwBxjZAnm-v0ypfeICQvkF1OcAgs9dXJog&_nc_ad=z-m&_nc_cid=1462&_nc_zt=23&_nc_ht=instagram.fbog20-1.fna&_nc_gid=rZNUXKF3aqAD5u6qtrz-ww&_nc_ss=7a32e&oh=00_Af0_KALA8ag3D93zexNR7X--VroU2M_5G6LtxRoyfL8Dxg&oe=69D381B3",
+    alt: "Momento MetroPizza - Slice de Verdad"
   },
-  { 
-    src: "https://instagram.fbog20-1.fna.fbcdn.net/v/t39.30808-6/392938801_18020404813794197_6164225698629784100_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=MzIxNTA5ODkzNjkwMTIzMDQ0OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNDl4MTY4Ny5zZHIuQzMifQ%3D%3D&_nc_ohc=qMZ6j1TSc60Q7kNvwHm8Tax&_nc_oc=Ado5i0062rfZmibw4ttQEsT7HevPl0xH0p-MdSfA3SzYYxL7SjUik5h-qn00ZI2xqRk&_nc_ad=z-m&_nc_cid=1462&_nc_zt=23&_nc_ht=instagram.fbog20-1.fna&_nc_gid=3EDGtbiJ264q8_30nbvdiQ&_nc_ss=7a32e&oh=00_Af1looksQIzmJ3T8mEKTfcRurFS8djFtDzKpqCjcEP6-Xg&oe=69D37DE9", 
-    alt: "Especialidad de la Casa - Mucho Queso" 
+  {
+    src: "https://instagram.fbog20-1.fna.fbcdn.net/v/t39.30808-6/392938801_18020404813794197_6164225698629784100_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=MzIxNTA5ODkzNjkwMTIzMDQ0OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNDl4MTY4Ny5zZHIuQzMifQ%3D%3D&_nc_ohc=qMZ6j1TSc60Q7kNvwHm8Tax&_nc_oc=Ado5i0062rfZmibw4ttQEsT7HevPl0xH0p-MdSfA3SzYYxL7SjUik5h-qn00ZI2xqRk&_nc_ad=z-m&_nc_cid=1462&_nc_zt=23&_nc_ht=instagram.fbog20-1.fna&_nc_gid=3EDGtbiJ264q8_30nbvdiQ&_nc_ss=7a32e&oh=00_Af1looksQIzmJ3T8mEKTfcRurFS8djFtDzKpqCjcEP6-Xg&oe=69D37DE9",
+    alt: "Especialidad de la Casa - Mucho Queso"
   },
 ];
 
