@@ -58,12 +58,12 @@ export default function Home() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "PizzaRestaurant",
-          "name": "MetroPizza - Best Pizza in Cúcuta & Los Patios | La Mejor Pizza",
-          "alternateName": ["Metro Pizza", "Metro Pizza Cúcuta", "Metro Pizza Los Patios", "Metro Pizza Pinar del Río", "MetroPizza Col", "Best Pizza Cucuta"],
+          "name": "MetroPizza · La Mejor Pizza en Los Patios, Cúcuta y Pinar del Río",
+          "alternateName": ["MetroPizza", "Metro Pizza", "Metro Pizza Cúcuta", "Metro Pizza Los Patios", "Metro Pizza Pinar del Río", "MetroPizza Colombia", "Best Pizza Cucuta"],
           "image": "https://metropizzacol.com/logo.jpg",
           "@id": "https://metropizzacol.com",
           "url": "https://metropizzacol.com",
-          "keywords": "best pizza nearby, best pizza near me open now, pizza los patios, la mejor pizza de los patios, pizza cucuta, pizza pinar del rio, pizza cerca de mi, metro pizza, pizzeria cucuta, best pizza cucuta, pizza delivery cucuta",
+          "keywords": "pizza cerca de mi, restaurante cerca de mi, mejor pizzería cerca de mi, la mejor pizza en cucuta, la mejor pizza de los patios, mejor pizzería en cucuta, mejor pizza norte de santander, pizza cucuta, pizza los patios, pizza pinar del rio, pizza a domicilio cucuta, domicilios de pizza los patios, pedir pizza cucuta, pizzería abierta ahora cucuta, pizza por metro cucuta, pizza artesanal cucuta, pizza para fiestas cucuta, restaurante familiar los patios, metropizza, metro pizza, pizzeria cucuta, best pizza nearby, best pizza near me open now, best pizza in cucuta, best pizza cucuta, pizza delivery cucuta colombia",
           "telephone": "+573108884489",
           "priceRange": "$$",
           "address": {
@@ -1059,8 +1059,8 @@ export default function Home() {
               {
                 "@type": "Restaurant",
                 "@id": "https://metropizzacol.com/#restaurant",
-                name: "MetroPizza - Best Pizza in Cúcuta & Los Patios | La Mejor Pizza",
-                description: "Best pizza near me in Cúcuta & Los Patios open now. La mejor pizza en Cúcuta y pizza en Los Patios domicilios. Especialistas en pizza por metro, pizza gigante para fiestas y pizza artesanal.",
+                name: "MetroPizza · La Mejor Pizza en Cúcuta y Los Patios · Domicilios",
+                description: "La mejor pizza en Cúcuta y Los Patios. Pizza por metro, artesanal y a domicilio. Pizzería abierta ahora con domicilios rápidos. Pizza para fiestas, cumpleaños y reuniones familiares.",
                 image: "https://images.unsplash.com/photo-1552832230-c0197dd311f5?q=80&w=1996&auto=format&fit=crop",
                 telephone: "+57 310 8884489",
                 email: "contacto@metropizza.com",
@@ -1069,7 +1069,7 @@ export default function Home() {
                 servesCuisine: ["Pizza", "Italian", "Pasta", "Lasagna", "Crepes"],
                 currenciesAccepted: "COP",
                 paymentAccepted: "Efectivo, Tarjeta de Crédito, Tarjeta Débito, Cash, Credit Card",
-                keywords: "best pizza nearby, best pizza near me open now, best pizza cucuta, pizza near me cucuta, pizza los patios, pizza cucuta, metro pizza cucuta, pizzeria cucuta domicilios",
+                keywords: "pizza cerca de mi, restaurantes cerca de mi, la mejor pizza en cucuta, la mejor pizza de los patios, mejor pizzería en cucuta, pizza a domicilio cucuta, pizza a domicilio los patios, domicilios de pizza cucuta, pedir pizza cucuta, pizzería abierta ahora cucuta, pizza por metro cucuta, pizza artesanal cucuta, pizza para fiestas cucuta, pizza para cumpleaños cucuta, restaurante familiar cucuta, metropizza, metro pizza cucuta, metro pizza, pizzeria cucuta, pizzeria cucuta domicilios, donde comer pizza en cucuta, best pizza nearby, best pizza near me open now, best pizza in cucuta, best pizza cucuta, pizza near me cucuta, pizza delivery cucuta colombia",
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "Cl. 16 #9-45",
@@ -1223,7 +1223,7 @@ export default function Home() {
               "closes": "22:00"
             }],
             "servesCuisine": ["Italian", "Pizza", "Pasta"],
-            "keywords": "pizza pinar del rio, pizza cucuta, pizza cerca de mi, pizzeria pinar del rio, domicilios pizza cucuta",
+            "keywords": "pizza pinar del rio, pizzería pinar del río, pizzeria pinar del rio, pizza cerca de mi, la mejor pizza pinar del rio, pizza a domicilio pinar del rio, domicilios de pizza cucuta, domicilios pizza cucuta, mejor pizzería cucuta, pizza artesanal pinar del rio, pizza para fiestas pinar del rio, restaurante familiar pinar del rio, pizza gourmet cucuta, pizza cucuta, donde comer pizza pinar del rio, metropizza pinar del rio",
             "hasMap": "https://maps.app.goo.gl/taQKGG7XHC1PyM3N8"
           })
         }}
